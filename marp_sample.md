@@ -17,10 +17,11 @@ Better than PowerPoint?
 
  # Why use Marp
 
- * it is free
- * it use markdown
- * it is easy to use
+ - it is free
+ - it use markdown
+ - it is easy to use
 
+ <!-- this is a speacker notes -->
 ---
 
 # Why use Marp
