@@ -3,8 +3,8 @@ marp: true
 theme: uncover
 class: invert
 paginate: true
-header: test header
-footer: Copyright 2023. **don't** _copy me._
+header: visual studio code install
+footer: 2023.01.12
 ---
 
 # HTML 뷰어 설치
