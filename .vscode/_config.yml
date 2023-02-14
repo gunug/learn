@@ -1,7 +1,10 @@
 #jekyll comfiguration
+
 url: "http://gunug.github.io"
 markdown: kramdown
-hightlighter:rouge
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
 
 plugins:
   - jekyll-relative-links
