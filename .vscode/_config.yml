@@ -1,3 +1,8 @@
+#jekyll comfiguration
+url: "http://gunug.github.io"
+markdown: kramdown
+hightlighter:rouge
+
 plugins:
   - jekyll-relative-links
 relative_links:
