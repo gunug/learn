@@ -66,6 +66,9 @@ html 작성으로 다단을 나눠서 사용
 
 # 수식
 $$I_{xx}=\int\int_Ry^2f(x,y)\cdot{}dydx$$
+```
+$$I_{xx}=\int\int_Ry^2f(x,y)\cdot{}dydx$$
+```
 
 ---
 
@@ -76,5 +79,13 @@ Banana | Yellow | 4 | £1.00
 Apple | Red | 2 | £0.60
 Orange | Orange | 10 | £2.50
 Coconut | Brown | 1 | £1.50
+```
+Fruit | Colour | Amount | Cost
+-----|------|:-----:|------:
+Banana | Yellow | 4 | £1.00
+Apple | Red | 2 | £0.60
+Orange | Orange | 10 | £2.50
+Coconut | Brown | 1 | £1.50
+```
 
 ---
