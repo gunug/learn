@@ -3,15 +3,26 @@ marp: true
 theme: uncover
 class: invert
 paginate: true
-header: programming basic
-footer: 2023-02-10 ~ 2023-02-10
+header: Dialogue system
+footer: 2023-02-15
 ---
 
-Dialogue system
-![bg blur:30px opacity:10% w:80%](../../Marp_images/Unity3d/asset_dialogue_system_title.png)
+![w:400](../../Marp_images/Unity3d/asset_dialogue_system_title.png)
+# Dialogue system
+[asset store](
+https://assetstore.unity.com/packages/tools/ai/dialogue-system-for-unity-11672)
 
-https://assetstore.unity.com/packages/tools/ai/dialogue-system-for-unity-11672
+---
 
+# Welcome window
+![](../../Marp_images/Unity3d/asset_dialogue_system_welcomwindow.png)
+
+* [document](https://www.pixelcrushers.com/dialogue_system/manual2x/html/)
+* [video tutorial](https://www.pixelcrushers.com/dialogue-system/dialogue-system-tutorials/)
+
+---
+
+# demo scene
 ```
 Assets > Plugins > Pixel Crushers > Dialogue System > Demo > Scene
 ```

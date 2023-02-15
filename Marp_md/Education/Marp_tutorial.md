@@ -7,6 +7,11 @@ header: Marp tutorial
 footer: 2023-02-10
 ---
 
+# Marp
+[Marp marpdown](https://marpit.marp.app/markdown)
+
+---
+
 # start
 
 ```
@@ -89,3 +94,23 @@ Coconut | Brown | 1 | £1.50
 ```
 
 ---
+
+<!-- _footer: "1. www.google.com" -->
+[1]: https://www.google.com
+
+Inline link [to slide 1](./file-name.html#1)
+
+---
+
+![blur:20px opacity:20% w:400](../../Marp_images/Unity3d/asset_dialogue_system_title.png)
+
+![blur]()	![blur:10px]()
+![brightness]()	![brightness:1.5]()
+![contrast]()	![contrast:200%]()
+![drop-shadow]()	![drop-shadow:0,5px,10px,rgba(0,0,0,.4)]()
+![grayscale]()	![grayscale:1]()
+![hue-rotate]()	![hue-rotate:180deg]()
+![invert]()	![invert:100%]()
+![opacity]()	![opacity:.5]()
+![saturate]()	![saturate:2.0]()
+![sepia]()	![sepia:1.0]()
