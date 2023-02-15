@@ -7,7 +7,7 @@ header: Dialogue system
 footer: 2023-02-15
 ---
 
-![w:400](../../Marp_images/Unity3d/asset_dialogue_system_title.png)
+![h:300](../../Marp_images/Unity3d/asset_dialogue_system_title.png)
 # Dialogue system
 [asset store](
 https://assetstore.unity.com/packages/tools/ai/dialogue-system-for-unity-11672)
@@ -15,7 +15,7 @@ https://assetstore.unity.com/packages/tools/ai/dialogue-system-for-unity-11672)
 ---
 
 # Welcome window
-![](../../Marp_images/Unity3d/asset_dialogue_system_welcomwindow.png)
+![h:300](../../Marp_images/Unity3d/asset_dialogue_system_welcomwindow.png)
 
 * [document](https://www.pixelcrushers.com/dialogue_system/manual2x/html/)
 * [video tutorial](https://www.pixelcrushers.com/dialogue-system/dialogue-system-tutorials/)
@@ -26,3 +26,10 @@ https://assetstore.unity.com/packages/tools/ai/dialogue-system-for-unity-11672)
 ```
 Assets > Plugins > Pixel Crushers > Dialogue System > Demo > Scene
 ```
+
+---
+
+# Dialogue database
+
+* project window | > Create > 
+![h:300](../../Marp_images/Unity3d/asset_ds_database.png)
