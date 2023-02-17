@@ -7,6 +7,10 @@ header: programming basic
 footer: 2023-02-10 ~ 2023-02-10
 ---
 
+변수 Variable
+
+---
+
 # 파일명 폴더명 변수명 금기
 * 한글
 * 숫자로 시작

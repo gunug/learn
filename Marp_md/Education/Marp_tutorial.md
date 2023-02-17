@@ -102,8 +102,9 @@ Inline link [to slide 1](./file-name.html#1)
 
 ---
 
-![blur:20px opacity:20% w:400](../../Marp_images/Unity3d/asset_dialogue_system_title.png)
+![blur:30px opacity:30% w:400](../../Marp_images/Unity3d/asset_dialogue_system_title.png)
 
+```markdown
 ![blur]()	![blur:10px]()
 ![brightness]()	![brightness:1.5]()
 ![contrast]()	![contrast:200%]()
@@ -114,3 +115,4 @@ Inline link [to slide 1](./file-name.html#1)
 ![opacity]()	![opacity:.5]()
 ![saturate]()	![saturate:2.0]()
 ![sepia]()	![sepia:1.0]()
+```
