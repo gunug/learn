@@ -65,6 +65,20 @@ Console.WriteLine(d[0]); //30
 
 변수의 선언
 ```c#
-int number = 10;
+int num1 = 10;
+string str1 = "a";
 //변수타입 변수이름 = 초기값;
 ```
+
+```javascript
+var num1 = 10;
+var str1 = "a";
+//변수선언 변수이름 = 초기값;
+```
+* typescript
+* MS에서 만든 JavaScript의 슈퍼셋(Superset) 프로그래밍 언어.
+
+---
+
+
+* 변수 선언이 어디에 있든 상관없이 다른 코드보다 먼저 실행되는 특징을 호이스팅(hoisting)

@@ -4,7 +4,7 @@ theme: uncover
 class: invert
 paginate: true
 header: programming basic
-footer: 2023-02-10 ~ 2023-02-10
+footer: 2023-02-10 ~ 2023-02-17
 ---
 
 함수 Function
@@ -15,3 +15,89 @@ footer: 2023-02-10 ~ 2023-02-10
 * Method : 클래스, 구조체, 열거형에 포함되어 있는 함수(Function)
 
 ---
+
+함수의 선언
+기본 함수
+```C#
+public void func1(){
+	Console.WriteLine("C");
+}
+```
+* void 비어 있음
+
+```javascript
+function func1(){
+    console.log("C");
+}
+```
+
+---
+
+함수의 호출
+```
+func1();
+```
+
+---
+
+인자값이 있는 함수
+```C#
+public void func1(string str1){
+	Console.WriteLine(str1);
+}
+```
+* void 비어 있음
+
+```javascript
+function func1(str1){
+    console.log(str1);
+}
+```
+
+```C#
+func1("D");
+func1("C");
+```
+
+---
+
+리턴이 있는 함수
+```C#
+public int func1(){
+	return 10;
+}
+```
+* void 비어 있음
+
+```javascript
+function func1(){
+    return 10;
+}
+```
+
+```C#
+int num1 = func1();
+Console.WriteLine(num1);
+```
+
+---
+
+인자값 리턴 있는 함수
+```C#
+public int func1(int num1){
+    return num1 + 1;
+}
+```
+* void 비어 있음
+
+```javascript
+function func1(num1){
+    return num1 + 1;
+}
+```
+
+```C#
+int num1 = func1(10);
+Console.WriteLine(num1);
+//11
+```
