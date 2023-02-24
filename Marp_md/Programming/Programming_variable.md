@@ -82,3 +82,22 @@ var str1 = "a";
 
 
 * 변수 선언이 어디에 있든 상관없이 다른 코드보다 먼저 실행되는 특징을 호이스팅(hoisting)
+
+---
+
+# 타입(형)
+* 형식이 안맞으면 값 저장불가
+* 형식이 안맞으면 참조 기록불가
+# 캐스팅(형변환)
+```c#
+int m = 10;
+int n = 3;
+Console.WriteLine( (double)m / n );
+Console.WriteLine( m / n );
+```
+
+---
+
+* 암묵적 형변환 (implicitly type cast)
+
+---
