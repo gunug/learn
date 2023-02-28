@@ -11,6 +11,19 @@ footer: 2023-02-22
 
 ---
 
+# Photon pun2 개념
+
+## - Prefab(프리팹)이란 한 줄로 설명하자면
+<br>
+: 미리 만들어진 Object를 재활용 가능한 형태로 만들어 두는 것을 의미합니다.
+<br>
+<br>
+- 편리한 점:  여러 Scene에서 같은 Object가 필요할 때,
+Prefab으로 만들어 두면 Object를 재사용하기 편리해집니다.
+
+
+---
+
 # RPC
 
 ```C#
@@ -123,3 +136,48 @@ public void OnDisable()
 }
 ```
 특정 함수를 등록하여 사용
+
+---
+
+## 6. Photon Scene Change
+
+https://www.youtube.com/watch?v=4f_VGLtdQ-I
+
+https://www.youtube.com/watch?v=51W7tnnvzbs
+
+RPC : Remote Procedure Call : 원격 프로시저 콜
+
+---
+
+### Photon으로 오브젝트 동기화하는 방법
+
+#### 1). 잡는 기능을 가진 오브젝트를 동기화시킬 때
+
+: 잡을 수 있는 범위를 가진 오브젝트, 즉 BoxCollider를 가지고 있는 Obeject 안에
+Photon View, Photon Transform View, Pun OVR Grabbable 스크립트 추가
+
+![bg right w:550](./microsoftteams_project_2/photon_1.png)
+
+---
+
+### - 체크 할 것
+
+- Photon View : 
+-Ownership Transfer - TrakeOver
+-Synchronization - Unreliable On Change.
+-Observable Search - Manual (이때 Observable Components는 
+자기 자신 (해당 스크립트를 가지고 있는 오브젝트)으로 하기
+
+→ 드래그 드랍 시 Photon Transform View 스크립트 자동 생성
+
+- Photon Transform View :
+-Position - Check, Rotation - Check, Use Local - Uncheck
+ 
+- Pun OVR Grabbable :
+-Allow Offhand Grab - Check
+
+---
+
+- Rigidbody 추가(설정 Interpoliate로 변경), boxcollider 추가
+
+![w:650](./microsoftteams_project_2/rigidbody_addbox_collider.png)

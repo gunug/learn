@@ -178,3 +178,80 @@ project window | Assets > Plugins > Pixel Crushers > Dialog System > templates >
 
 ![bg h:400](../../Marp_images/Unity3d/asset_ds_commend2.png)
 ![bg w:100% h:400](../../Marp_images/Unity3d/asset_ds_commend1.png)
+
+---
+
+# getValue, setValue
+```c#
+using PixelCrushers.DialogueSystem;
+
+Debug.Log("variable is:" + DialogueLua.GetVariable("chapter"));
+DialogueLua.SetVariable("chapter", 1);
+```
+
+---
+
+# 대화내에 특정 변수 표시하기
+* [자료 출처](https://www.pixelcrushers.com/phpbb/viewtopic.php?t=1140)
+* Variables에 변수 추가
+* Dialogue Text에  [var=변수명] 입력
+
+---
+
+# Dialogue
+ ![h:400](../../Marp_images/Unity3d/image11.png)
+* window-asset store-Dialogue검색-Buynow 후 import
+
+
+---
+ ![h:400](../../Marp_images/Unity3d/image12.png)
+- imsport한 후 project창에 빈 곳을  오른쪽 마우스를 클릭 create 클릭 후 맨 위에 있는 pixelcrushers 클릭 후  Dialougue Syteam 클릭 후 Dialouge Database클릭
+
+---
+
+ ![h:400](../../Marp_images/Unity3d/image13.png)
+ - 만든 Dialouge Database를 더블클릭 후 Dialouge창을 game에 옮기고 Conversations 선택
+
+---
+
+  ![h:400](../../Marp_images/Unity3d/image14.png)
+  -  (+) 버튼을 눌러 New Conversation 1를 생성
+
+---
+
+ ![bg left height:4in](../../Marp_images/Unity3d/image15.png)
+![bg left height:4in](../../Marp_images/Unity3d/image16.png)
+ -  start 오른쪽 마우스 클릭 후 Create Child Node 클릭 node 생성
+
+ ---
+  ![h:400](../../Marp_images/Unity3d/image17.png)
+ -  Dialouge Text 입력 후 conditons에는 순서를 넣을 것 
+ - conditons에서는  Variable["chapter"] == 0 and  기입
+ - < start>를 시작 기점으로 변수 숫자는 0부터 시작해 0부터 넣을 것 
+ 
+
+
+ ---
+ ![h:400](../../Marp_images/Unity3d/image18.png)
+- node[END] 부분에서 다음 Node로 이동하기위해선
+- script에서 Variable["chapter"] == 1  기입
+- 플레이 버튼을 눌러 테스트 해볼 것 
+
+---
+![h:400](../../Marp_images/Unity3d/image19.png)
+* Conversations를 제작하다 복잡하게 배치할때
+
+---
+
+![h:400](../../Marp_images/Unity3d/image20.png)
+* < start>에오른쪽 마우스를 눌러 Arrange Nodes를 클릭
+
+---
+![h:400](../../Marp_images/Unity3d/image21.png)
+* Vertically(가운대 배치), Horizontally(좌쪽으로 배치)선택하여 클릭
+
+----
+![bg left height:4in](../../Marp_images/Unity3d/image22.png)
+
+![bg left height:4in](../../Marp_images/Unity3d/image23.png)
+이런식으로 배치가 가능
