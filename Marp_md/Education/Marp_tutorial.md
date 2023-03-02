@@ -1,6 +1,6 @@
 ---
 marp: true
-theme: gaia
+theme: a4
 class:
   - lead
   - invert

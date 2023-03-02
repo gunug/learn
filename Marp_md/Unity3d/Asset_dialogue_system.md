@@ -1,7 +1,9 @@
 ---
 marp: true
-theme: uncover
-class: invert
+theme: a4
+class:
+  - lead
+  - invert
 paginate: true
 header: Dialogue system
 footer: 2023-02-15 - 2023-02-16
