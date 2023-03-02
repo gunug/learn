@@ -59,22 +59,22 @@ footer: 2023.02.10 ~ 2023.03.02
 ![bg right:40% h:50%](../../Marp_images/Education/introduce_exhibition.png)
 
 ---
-![bg left:100% w:600](../../Marp_images/Education/gif/arduino_motor.gif)
-![bg right:100% w:600](../../Marp_images/Education/gif/arduino_segment.gif)
+![bg left:100% w:600](../../Marp_images/Education/GIF/arduino_motor.gif)
+![bg right:100% w:600](../../Marp_images/Education/GIF/arduino_segment.gif)
 <!-- 아두이노 컴퓨팅 디바이스 -->
 ---
-![bg left:100% w:600](../../Marp_images/Education/gif/physical_rotator.gif)
-![bg right:100% w:600](../../Marp_images/Education/gif/physical_rotator_content1.gif)
+![bg left:100% w:600](../../Marp_images/Education/GIF/physical_rotator.gif)
+![bg right:100% w:600](../../Marp_images/Education/GIF/physical_rotator_content1.gif)
 <!-- 아두이노 컴퓨팅 디바이스 -->
 ---
-![bg left:100% w:600](../../Marp_images/Education/gif/metaverse1.gif)
-![bg right:100% w:600](../../Marp_images/Education/gif/metaverse2.gif)
+![bg left:100% w:600](../../Marp_images/Education/GIF/metaverse1.gif)
+![bg right:100% w:600](../../Marp_images/Education/GIF/metaverse2.gif)
 <!-- Photon PUN을 이용한 메타버스 공간구현 -->
 ---
-![bg left:100% w:600](../../Marp_images/Education/gif/tracking.gif)
-![bg right:100% w:600](../../Marp_images/Education/gif/vr1.gif)
+![bg left:100% w:600](../../Marp_images/Education/GIF/tracking.gif)
+![bg right:100% w:600](../../Marp_images/Education/GIF/vr1.gif)
 <!-- XR Studio -->
 ---
-![bg left:100% w:600](../../Marp_images/Education/gif/xr_space1.gif)
-![bg right:100% w:600](../../Marp_images/Education/gif/xr_space2.gif)
+![bg left:100% w:600](../../Marp_images/Education/GIF/xr_space1.gif)
+![bg right:100% w:600](../../Marp_images/Education/GIF/xr_space2.gif)
 <!-- XR Studio -->
