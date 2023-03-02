@@ -1,10 +1,16 @@
 ---
 marp: true
-theme: uncover
-class: invert
+theme: a4
+class:
+  - lead
+  - invert
 paginate: true
 header: 강사소개
 footer: 2023.02.10 ~ 2023.03.02
+---
+
+# 교수 소개
+
 ---
 
 # 소개
@@ -38,6 +44,7 @@ footer: 2023.02.10 ~ 2023.03.02
 
 ---
 
+
 # 웹 에이전시
 - 코크 플레이, TTL
 - 밀러 맥주, SKW
@@ -49,7 +56,7 @@ footer: 2023.02.10 ~ 2023.03.02
 
 ---
 
-# <!--fit-->디지털 미디어 전시
+# 디지털 미디어 전시
 - DMC홍보관
 - 런던 한류박람회 KBEE 2013
 - 쿠바 국제박람회 FIHAV 2014

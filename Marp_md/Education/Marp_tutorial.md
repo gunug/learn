@@ -1,7 +1,9 @@
 ---
 marp: true
-theme: uncover
-class: invert
+theme: gaia
+class:
+  - lead
+  - invert
 paginate: true
 header: Marp tutorial
 footer: 2023-02-10
@@ -17,13 +19,17 @@ footer: 2023-02-10
 ```
 ---
 marp: true
-theme: uncover
-class: invert
+theme: gaia
+class:
+  - lead
+  - invert
 paginate: true
 header: Marp tutorial
 footer: 2023-02-10
 ---
 ```
+* theme: default, uncover, gaia
+* class:  invert, lead
 
 ---
 
@@ -309,4 +315,9 @@ export slide deck 클릭
 
 [참고:Youtube](https://www.youtube.com/@dougmercer)
 
-  
+---
+
+# 커스텀 테마 적용
+* https://velog.io/@moyakk/marp-for-VS-Code
+* /theme/폴더에 css작성시 주석으로 테마명을 명시
+* Marp 설정에서 테마를 추가하고 md파일 상단에 명시
