@@ -4,25 +4,26 @@ theme: uncover
 class: invert
 paginate: true
 header: 강사소개
-footer: 2023.02.10
+footer: 2023.02.10 ~ 2023.03.02
 ---
 
 # 소개
 - 이름 : 조건희
-- 계원예술대학교 겸임교수(2015) 
-- 원더랩 개인사업(2018)
+- 계원예술대학교 겸임교수(2015 ~ 현재) 
+- 원더랩 개인사업(2018 ~ 현재)
 
-![bg right:40% h:40%](../../Marp_images/Education/face.png)
+![bg right:25% h:40%](../../Marp_images/Education/face.png)
 
 ---
 
 # 연역
-- 계원예술대학교 졸업
+- 계원예술대학교 졸업 (2008)
 - 홍대영상대학원 수료
 - 웹에이전시 업무경력
-- 계원예술대, 명지전문대 교육경력
+- 계원예술대 교육경력
+- 명지전문대 교육경력
 
-![bg right:40% h:70%](../../Marp_images/Education/introduce_history.png)
+![bg right:40% h:50%](../../Marp_images/Education/introduce_history.png)
 
 <!-- - 2004~2008 계원 조형 예술대학 졸업
 - 2008~2010 픽스다인 재직
@@ -38,30 +39,42 @@ footer: 2023.02.10
 ---
 
 # 웹 에이전시
-- 코크 플레이
-- TTL
-- 밀러 맥주
-- SKW
-- 스포티지R
-- 이자녹스
+- 코크 플레이, TTL
+- 밀러 맥주, SKW
+- 스포티지R, 이자녹스
 - 영 삼성 라이프 (접근성)
 - 외 25개 사이트 플래시 제작
 
-![bg right:40% h:70%](../../Marp_images/Education/introduce_web.png)
+![bg right:40% h:50%](../../Marp_images/Education/introduce_web.png)
 
 ---
 
-# 디지털 미디어 전시
+# <!--fit-->디지털 미디어 전시
 - DMC홍보관
 - 런던 한류박람회 KBEE 2013
 - 쿠바 국제박람회 FIHAV 2014
-- 외 전시회 키오스크 컨텐츠 제작
+- 전시회 키오스크 제작
+- 전시 컨텐츠 제작
 
-![bg right:40% h:70%](../../Marp_images/Education/introduce_exhibition.png)
+![bg right:40% h:50%](../../Marp_images/Education/introduce_exhibition.png)
 
 ---
-
-![w:400](../../Marp_images/Education/arduino_motor.gif)
-![w:400](../../Marp_images/Education/arduino_segment.gif)
-아두이노 피지컬 컴퓨팅 디바이스
-
+![bg left:100% w:600](../../Marp_images/Education/gif/arduino_motor.gif)
+![bg right:100% w:600](../../Marp_images/Education/gif/arduino_segment.gif)
+<!-- 아두이노 컴퓨팅 디바이스 -->
+---
+![bg left:100% w:600](../../Marp_images/Education/gif/physical_rotator.gif)
+![bg right:100% w:600](../../Marp_images/Education/gif/physical_rotator_content1.gif)
+<!-- 아두이노 컴퓨팅 디바이스 -->
+---
+![bg left:100% w:600](../../Marp_images/Education/gif/metaverse1.gif)
+![bg right:100% w:600](../../Marp_images/Education/gif/metaverse2.gif)
+<!-- Photon PUN을 이용한 메타버스 공간구현 -->
+---
+![bg left:100% w:600](../../Marp_images/Education/gif/tracking.gif)
+![bg right:100% w:600](../../Marp_images/Education/gif/vr1.gif)
+<!-- XR Studio -->
+---
+![bg left:100% w:600](../../Marp_images/Education/gif/xr_space1.gif)
+![bg right:100% w:600](../../Marp_images/Education/gif/xr_space2.gif)
+<!-- XR Studio -->
