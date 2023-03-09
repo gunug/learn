@@ -8,7 +8,6 @@ paginate: true
 header: 1주차 과제
 footer: 2023-03-02
 ---
-
 # 1주차 과제
 
 ---

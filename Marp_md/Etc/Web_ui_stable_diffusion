@@ -1,0 +1,28 @@
+---
+marp: true
+theme: a4
+class:
+  - lead
+  - invert
+paginate: true
+header: WebUi stable diffusion
+footer: 2023-02-14 ~ 2023-03-02
+---
+
+* 시작 > cmd
+* webui-user.bat파일이 있는 곳으로 이동
+* webui-user.bat실행
+
+* 해당파일의 바로가기 파일을 만들어서 실행해도 됨
+* 접속주소 :  http://127.0.0.1:7860
+
+---
+
+ngrok
+* ngrok.exe http 7860로 외부주소에서 접속 가능하게함
+* 8시간의 세션만료시간이 있으니 홈페이지 가입후 키입력을 하면 제한 풀림
+
+* 배치(bat)파일만들어
+```start f:\ngrok\ngrok.exe http 7860``` 작성하면 쉽게 시동
+
+---
