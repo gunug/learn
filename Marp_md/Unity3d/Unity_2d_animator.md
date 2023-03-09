@@ -38,6 +38,7 @@ footer: 2023-03-09
 - 마우스 우클릭하여 ```Make Transition``` 선택
 - 마우스에 따라다니는 화살표를 다른 Animation을 클릭하여 연결
 ![bg right:40% w:500](../../Marp_images/Unity3d/Unity_2d_animator4.png)
+- 우클릭을 했는데 Make Trasition이 보이지 않을때 : 여러 애니메이션을 복수선택(드래그)한 후 우클릭 하면 나타남 (Unity 버그)
 
 ---
 
