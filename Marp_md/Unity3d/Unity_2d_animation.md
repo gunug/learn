@@ -71,6 +71,13 @@ footer: 2023-03-09
 
 ---
 
+* Animation 창의 time line(시간이 표시된곳)을 클릭하여 시간을 변경 -> 캐릭터의 상태를 변경
+* 같은 방식으로 계속 애니메이션을 만들어 나갈 수 있음
+![bg right:40% w:500](../../Marp_images/Unity3d/Unity_2d_animation10.png)
+* 타임라인의 끝에 도달하여 더 긴 애니메이션을 만들지 못할때, ```Ctrl + 마우스 휠```로 타임라인의 스케일을 조정할 수 있음
+
+---
+
 # Animation 추가하기
 * Animation을 여러개 만들어 여러가지 애니메이션을 적용 가능
 * Animation | 애니메이션 이름 > Create New Clip
