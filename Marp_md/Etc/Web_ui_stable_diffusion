@@ -9,6 +9,60 @@ header: WebUi stable diffusion
 footer: 2023-02-14 ~ 2023-03-02
 ---
 
+# Start
+* https://arca.live/b/aiart/68917133 설치 및 설정 정보글
+
+---
+
+# WebUI
+* 파일저장 이름 패턴 바꾸기
+* settings tab > Saving images/grids > Images filename pattern
+* ```[seed]-[steps]-[cfg]-[sampler]``` 패턴예시
+* ```00000-789761513-11-11-DPM++ 2M Karras.png``` 저장예시
+* 설정 > 저장경로에서 저장되는 위치 변경가능
+
+---
+
+# Model
+* https://arca.live/b/aiart/68304467 모델확인
+
+---
+
+# img2img를 이용한 업스케일링
+* ```\stable-diffusion-webui\outputs``` 있는 폴더 활용
+* ```\stable-diffusion-webui\inputs``` 폴더 새로만듬
+
+---
+
+# ddetailer - 설치과정중에 오류가 많아 안쓰는게 낫겠다.
+* 정보 출처 : https://arca.live/b/aiart/70355715
+* 깃주소 : https://github.com/dustysys/ddetailer
+* 익스텐션 설치후 시작에러가 남
+* 추가 설치 방법 : https://github.com/dustysys/ddetailer/issues/1#issuecomment-1309415543
+* https://visualstudio.microsoft.com/ko/downloads/ 에서 'Visual Studio 2022용 빌드 도구 '다운로드
+* 설치 프로그램을 실행하고 설치하기 전에 'Desktop development with C++'를 선택
+* C++를 사용한 테스크톱 개발
+* 패키지가 자동으로 선택됩니다. 설치를 마침
+* 이후 신버전은 자동으로 업데이트 된다고 함, 아래 절차를 수행할 필요 없음
+* powershell(또는 명령 프롬프트) 열기
+* sd-webui 폴더로 이동하고 다음 명령을 실행합니다.
+```
+venv\Scripts\activate
+pip install Cython
+pip install "git+https://github.com/philferriere/cocoapi.git#egg=pycocotools&subdirectory=PythonAPI"
+```
+---
+
+# ddetailer - 사용법
+
+* 이 스크립트를 사용하면 와일드 카드가 적용이 안됨.
+* 설정법: https://arca.live/b/aiart/70368079
+* 심화편: https://arca.live/b/aiart/70372490
+* bbox - 얼굴만 감지
+* segm - 몸전체 감지
+
+---
+
 # VAE
 * ```\stable-diffusion-webui\model\VAE``` 설치
 * 설치후 WebUI 재시작 ```settings > reload UI
@@ -28,6 +82,32 @@ footer: 2023-02-14 ~ 2023-03-02
 
 ---
 
+# controllnet
+* https://arca.live/b/aiart/69816884 설치 및 설정
+* WebUI | Extensions > install from URL
+* 깃주소 ```https://github.com/Mikubill/sd-webui-controlnet```입력
+* 아래의 주소에서 'openpose' 모델 다운로드 (hugging face가 원본, civitai는 병합모델)
+* hugging face : https://huggingface.co/lllyasviel/ControlNet/tree/main/models
+* civitai : https://civitai.com/models/9251/controlnet-pre-trained-models
+* ```\stable-diffusion-webui\extensions\sd-webui-controlnet\models```에 파일옮기기
+* txt2img 하단의 controlNet, enable에 체크
+* 컨트롤넷 부연설명: https://arca.live/b/aiart/69724880
+
+---
+
+# controllnet - MLSD
+* 건물이나 인테리어 그리는데 특화
+![](https://ac-p2.namu.la/20230214sac2/5d1235597bf1637e67fe05957d71c391261f55124bfd4d55a9f72ddad60e10f9.png?type=orig)
+
+---
+
+# controllnet - pose editor extension
+* WebUI | Extensions > install from URL
+* 깃주소 : ```https://github.com/fkunn1326/openpose-editor``` 입력
+* 상단텝에 OpenPose Editor 생김
+
+---
+
 # Extension
 ## Whild Card Extension
 * WebUI | extensions > install from url
@@ -38,7 +118,13 @@ footer: 2023-02-14 ~ 2023-03-02
 * 내부에 텍스트파일 생성, 단어나열
 * 프롬프트에 ```__TXT파일명__```으로 입력
 * ChatGPT에 ```show me words about 원하는카테고리 without explain``` 질문해서 단어를 뽑아낼 수 있음.
+---
 * ```show me random situation sentence, without explain```
+* ```show me words about 'actual eye color' without explain```
+* ```show me words about 'job and clothes' (for example 'boss, office suite') without explain```
+* ```show me words about 'job and clothes and object and place' (for example 'boss, office suite, Fountain pen, boss room') without explain```
+* ```Remind me by adding objects to all the jobs you've told me so far. (for example 'boss, office suite', 'fountain pen')```
+* ```show me random 'background visual description sentence', without explain```
 ---
 
 # Web UI 구동

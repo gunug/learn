@@ -52,3 +52,88 @@ footer: 2023-03-10
 * s: dot all 도트(.)는 개행문자(\n)와 일치시킬 수 있음 (본래는 토드문자가 개행문자를 문자로 취급하지 않음)
 * x: extended 확장 정규 표현식을 사용할 수 있음. 패턴의 일부로 무시되는 공백을 패턴에 추가하여 가독성을 높일 수 있음, x플래그를 설정한 이후 공백문자를 리터럴로서 사용하려면 백슬래시(\)를 붙여서 써야함
 * ```/abc/gimsx``` 처럼 정규표현식 뒤에 작성하여 플래스를 설정할 수 있음 (기본값은 false, 설정시 true)
+
+---
+
+# Character literals
+* `/a/` : M`a`ry had `a` little l`a`mb. And everywhere th`a`t M`a`ry went, the l`a`mb w`a`s sure to go.
+* `/Mary/` : `Mary` had a little lamb.And everywhere that `Mary` went, the lamb was sure to go.
+
+# "Escaped" characters literals
+* 역슬래시(`\`)는 기능이 있는 문자를 리터럴 그 자체로 사용할수 있게 해준다
+* `/.*/` : `Special characters must be escaped.*`
+* `/\.\*/` : Special characters must be escaped`.*`
+
+---
+
+# Positional special characters
+
+* `/^Mary/`: `Mary` had a little lamb.And everywhere that Mary went, the lamb was sure to go.
+* `/Mary$/`: Mary had a little lamb.And everywhere that `Mary` went, the lamb was sure to go.
+
+# The "wildcard" character
+
+* `/.a/`: `Ma`ry `ha`d `a` little `la`mb.And everywhere t`ha`t `Ma`ry went, the `la`mb `wa`s sure to go.
+
+---
+
+# Grouping regular expressions
+* `/(Mary)( )(had)/` : `Mary had` a little lamb.And everywhere that Mary went, the lamb was sure to go.
+
+# Chracter class
+* `/[a-z]a/` : Mary `ha`d `a` little `la`mb.And everywhere t`ha`t Mary went, the `la`mb `wa`s sure to go.
+* 대소문자 구별로 `Ma`가 검사에서 제외됨
+
+---
+
+# Complement operator
+* `/[^a-z]a/` : `Ma`ry had `a` little lamb.And everywhere that `Ma`ry went, the lamb was sure to go.
+* 소문자 알파벳으로 시작하는 a를 제외한 모든 a(대문자, 공백) 검사됨
+* ^는 시작을 나타낸다고 알고 있었는데 부정으로도 쓰임?
+
+# Alternation of patterns
+* `/cat|dog|bird/` : The pet store sold `cat`s, `dog`s, and `bird`s
+
+---
+
+* =first first= # =second second= # =first= # =second=
+* `/=first|second=/` : `=first` first= # =second `second=` # `=first`= # =`second=`
+* `/(=)(first)|(second)(=)/` : =first first= # =second second= # =first= # =second=
+* `/=(first|second)=/`: =first first= # =second second= # `=first=` # `=second=`
+
+---
+
+# The basic abstract quantifier
+
+* `/@(=+=)*@/` : `@@`, @=+=ABC@ 매칭값이 다 존재 하지만 비매칭이 끼어 있어서 탈락, `@=+==+==+=@`, @=+=+=+=@ 패턴이 맞지 않아 탈락
+
+# More abstract quantifiers
+
+* `/A+B*C?D/`
+* +1개이상, *0개이상, ?1개이하
+* AAAD : true
+* ABBBBCD : true
+* BBBCD : false
+* ABCCD : false
+* AAABBBC : false
+
+---
+
+# Numeric quantifiers
+* `/a{5} b{,6} c{4,8}/` a 5개, b 6개이하, c 4개이상 8개이하
+
+# Back references
+* `/(abc|xyz) \1/`
+* jkl abc xyz
+* jkl xyz abc
+* jkl `abc abc`
+* jkl `xyz xyz`
+
+---
+
+# Don't match more then you want to
+
+* `/th.*s/`
+* -- I want to match `the words that s`tart
+* -- wi`th 'th' and end width 's`'
+* `this`, `thus`, `this`tle, `this line matches` too much
