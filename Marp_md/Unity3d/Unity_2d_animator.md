@@ -6,7 +6,7 @@ class:
   - invert
 paginate: true
 header: 2D Animator
-footer: 2023-03-09
+footer: 2023-03-09 ~ 2023-03-16
 ---
 
 # 2D Animator
@@ -16,7 +16,7 @@ footer: 2023-03-09
 # Animator 창 열기
 - Menu | Window > Animation > Animator
 ![bg right:40% w:500](../../Marp_images/Unity3d/Unity_2d_animator1.png)
-- 애니메이터는 애니메이션들을 모아서 디렉팅 하는 역할을 한다
+- 애니메이터는 애니메이션들을 모아서 디렉팅 하는 역할을 함
 - 각각 떨어져 있는 애니메이션을 순차로 재생하거나 재생 순서를 바꾸는 것이 가능
 
 ---
@@ -48,3 +48,46 @@ footer: 2023-03-09
 ![bg right:40% w:500](../../Marp_images/Unity3d/Unity_2d_animator5.png)
 
 ---
+
+- transition을 선택하고 inspector | transitions > - 버튼을 클릭하여 삭제 할 수도 있음
+![bg right:40% w:500](../../Marp_images/Unity3d/Unity_2d_animator11.png)
+
+---
+
+# Parameters (매개변수)
+- parameters : 어떤 일을 하는데 있어서 요인이 되는 변수
+- Animator | Parameters > + > Int를 선택하여 새 Int(정수)타입의 parameter를 생성합니다.
+- parameter의 이름을 'motion'으로 변경합니다.
+![bg right:40% w:500](../../Marp_images/Unity3d/Unity_2d_animator12.png)
+
+---
+
+# Conditions (상황)
+- Conditions : 특정 상황을 판단하고 행동하는 방식
+- Animator | transition(animation1에서 animation2로 향하는 화살표가 그려진 선) 선택
+- Inspector | Conditions > + 를 눌러서 condition 추가
+- motion Equals 1로 설정
+![bg right:40% w:500](../../Marp_images/Unity3d/Unity_2d_animator15.png)
+
+---
+- Animator | transition(animation2에서 animation1로 향하는 화살표가 그려진 선) 선택
+- Inspector | Conditions > + 를 눌러서 condition 추가
+- motion Equals 2로 설정
+![bg right:40% w:500](../../Marp_images/Unity3d/Unity_2d_animator16.png)
+
+---
+
+# Animation의 looptime 해제
+- Project창에서 Animation(삼각형이 이동하는 아이콘)선택
+- Inspector | Loop Time > 체크해제
+- 모든 Animation을 같은 방식으로 선택하여 체크해제
+![bg right:40% w:500](../../Marp_images/Unity3d/Unity_2d_animator13.png)
+
+---
+
+# Has Exit Time 해제
+- Animator | transition(animation1에서 animation2로 향하는 화살표가 그려진 선) 선택
+- Inspector | Has Exit Time > 체크해제
+- Animator | transition(animation2에서 animation1로 향하는 화살표가 그려진 선) 선택
+- Inspector | Has Exit Time > 체크해제
+![bg right:40% w:500](../../Marp_images/Unity3d/Unity_2d_animator14.png)

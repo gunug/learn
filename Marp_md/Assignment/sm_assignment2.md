@@ -50,6 +50,8 @@ footer: 2023-03-09
 ---
 
 # 포토샵 사용시 유의사항
+## window용 포토샵 신버전 PNG, JPG 저장방법
 - jpg확장자가 없을때 : 편집>환경설정>파일처리>원래폴더에 다른이름으로 저장
 - jpg확장자가 없을때 : edit>Preferences>File Handling> Enable legacy "Save As"
+## 맥용 포토샵 PNG, JPG 저장방법
 - 맥에서 이미지 파일을 다른 확장자로 저장하기 위해서는 export as로 
