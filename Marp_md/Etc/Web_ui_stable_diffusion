@@ -10,42 +10,185 @@ footer: 2023-02-14 ~ 2023-03-02
 ---
 
 # Start
-* https://arca.live/b/aiart/68917133 설치 및 설정 정보글
+- 설치 및 설정 정보 출처 https://arca.live/b/aiart/68917133 - 거의 백과사전급
+- WebUI 로컬 설치 정보 출처 https://dreaminfo.tistory.com/1201
 
 ---
 
-# WebUI
-* 파일저장 이름 패턴 바꾸기
-* settings tab > Saving images/grids > Images filename pattern
-* ```[seed]-[steps]-[cfg]-[sampler]``` 패턴예시
-* ```00000-789761513-11-11-DPM++ 2M Karras.png``` 저장예시
-* 설정 > 저장경로에서 저장되는 위치 변경가능
+# 성능 확인
+- 윈도우11 :  Ctrl + Shift + ESC
+- 성능 탭에서 각종 정보 확인
 
 ---
+
+## 그래픽카드
+- 라데온 인텔은 어렵다, 엔비디아라면 가능
+- 전용 GPU 메모리 - 통칭 VRAM이 적으면 CUDA 램부족 오류로 사진을 생성할수 없음
+- VRAM이 작을 수록 본인이 생성할 수 잇는 일러스트 크기가 작아짐. 최소 6GB이상
+- 다음 그래픽 카드는 코렙보다 느림, 차라리 코렙을 이용(512*768이미지 생성시 20초~2분)
+```
+GTX 1050, GTX 1050ti, GTX 1060, GTX 1070, GTX 1080, GTX 1650, GTX 1650s, GTX 1650TI, GTX 1660, GTX 1660s, GTX 1660TI, RTX 2060, RTX 2060s
+```
+---
+
+## VRAM
+- 8GB~ : 최소사양. 모델에 따라 로딩이 오래걸리거나 튕길수 있음
+- 16GB~ : 권장사양. 대부분의 활동가능
+- 32GB~ : 학습을 잘 다루게 되면 필요해 질수도
+
+---
+
+# 파이썬 설치
+- [파이썬 3.10.8](https://www.python.org/ftp/python/3.10.8/python-3.10.8-amd64.exe)
+- Add python.exe to PATH 체크
+- Install Now로 설치 시작
+
+# Git 설치
+- [Git 2.38.0 16bit](https://github.com/git-for-windows/git/releases/download/v2.38.0.windows.1/Git-2.38.0-64-bit.exe)
+- Next로 설치 시작
+
+---
+
+# Stable diffusion
+## Stable diffusion 설치
+- 설치할 새로운 위치에 폴더 생성하고 경로 복사(Ctrl+C)
+- 윈도우 | 시작 > cmd 입력하여 터미널 실행
+- ```cd 복사된경로붙이기(Ctrl+V)```입력하여 해당 경로로 이동
+- ```git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui.git``` 입력하여 설치 시작
+
+---
+
+## Stable diffusion, WebUI 실행
+- 시작 > cmd
+- webui-user.bat파일이 있는 곳으로 이동
+- webui-user.bat실행
+
+- webui-user.bat파일의 바로가기 파일을 만들어서 실행해도 됨
+- 접속주소 :  http://localhost:7860 또는 http://127.0.0.1:7860
+
+## xformers
+- 이미지 생성속도 증가
+- webui-user.bat에 --xformers추가
+
+---
+<!-- ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ -->
 
 # Model
-* https://arca.live/b/aiart/68304467 모델확인
+- 모델 정보 출처1 https://arca.live/b/aiart/68304467 
+- 모델 정보 출처2 https://dreaminfo.tistory.com/1201 
 
 ---
 
-# img2img를 이용한 업스케일링
-* ```\stable-diffusion-webui\outputs``` 있는 폴더 활용
-* ```\stable-diffusion-webui\inputs``` 폴더 새로만듬
+## Model 다운로드
+- 오렌지믹스(애니+반실사): https://huggingface.co/WarriorMama777/OrangeMixs/tree/main/Models/AbyssOrangeMix2 
+- 바질믹스(실사): https://huggingface.co/nuigurumi/basil_mix/tree/main
+- 칠 아웃믹스(실사,한국): https://civitai.com/?query=chilloutmix
+- 시비타이(모델보관소1): https://civitai.com/
+- 허깅페이스(모델보관소2): https://huggingface.co/
 
 ---
 
-# ddetailer - 설치과정중에 오류가 많아 안쓰는게 낫겠다.
-* 정보 출처 : https://arca.live/b/aiart/70355715
-* 깃주소 : https://github.com/dustysys/ddetailer
-* 익스텐션 설치후 시작에러가 남
-* 추가 설치 방법 : https://github.com/dustysys/ddetailer/issues/1#issuecomment-1309415543
-* https://visualstudio.microsoft.com/ko/downloads/ 에서 'Visual Studio 2022용 빌드 도구 '다운로드
-* 설치 프로그램을 실행하고 설치하기 전에 'Desktop development with C++'를 선택
-* C++를 사용한 테스크톱 개발
-* 패키지가 자동으로 선택됩니다. 설치를 마침
-* 이후 신버전은 자동으로 업데이트 된다고 함, 아래 절차를 수행할 필요 없음
-* powershell(또는 명령 프롬프트) 열기
-* sd-webui 폴더로 이동하고 다음 명령을 실행합니다.
+## Model 설치
+- ```\stable-diffusion-webui\model\Stable-diffusion```에 다운로드된 모델파일을 붙여넣기 하여 설치끝
+
+# VAE
+- ```\stable-diffusion-webui\model\VAE``` 설치
+- 설치후 WebUI 재시작 ```settings > reload UI
+- WebUI | Settings > Stable Diffusion > SD VAE에서 선택 
+- 상단의 Apply settings 선택
+
+---
+
+# TEXTUAL INVERSION
+- ```\stable-diffusion-webui\embeddings``` 설치
+- trigger word를 입력하여 실행한다.
+
+## easynagative
+- https://civitai.com/models/7808/easynegative
+
+---
+<!-- ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ -->
+# WebUI
+## 파일저장 이름 패턴 바꾸기
+- settings tab > Saving images/grids > Images filename pattern
+- ```[seed]-[steps]-[cfg]-[sampler]``` 패턴예시
+- ```00000-789761513-11-11-DPM++ 2M Karras.png``` 저장예시
+- 설정 > 저장경로에서 저장되는 위치 변경가능
+
+---
+
+# Hires 전 해상도 이미지 저장
+- setting | image/grid > save a copy of image before appying highres fix.
+
+
+## img2img를 이용한 업스케일링
+- ```\stable-diffusion-webui\outputs``` 있는 폴더 활용
+- ```\stable-diffusion-webui\inputs``` 폴더 새로만듬
+
+## Outpainting - 외부에 배경을 추가로 그림
+- img2img 하단의 script에서 outpainting mk2. 선택
+
+
+---
+
+## 제한 해제, 기본값 지정
+- ui-cofig.json
+- sampling steps : ```img2img/Sampling Steps/maximum": 150```
+
+## plot XYZ
+- 사용법 : https://arca.live/b/aiart/61028883
+- 사용법 : https://www.youtube.com/watch?v=y7rDdamvuAM
+- prompt S/R : 와일드카드는 안바꿔줌. 프롬프트내에 해당 단어를 , 쉼표 다음단어로 하나씩 교체해줌.
+
+---
+<!-- ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ -->
+## extension
+- extansion리스트 : https://arca.live/b/aiart/71470421?target=all&keyword=gif2gif&p=1
+
+### tagcomplete
+- https://github.com/DominikDoom/a1111-sd-webui-tagcomplete
+
+
+### clip - Interrogator
+- git주소 : https://github.com/pharmapsychotic/clip-interrogator-ext
+
+---
+
+### controllnet
+- https://arca.live/b/aiart/69816884 설치 및 설정
+- WebUI | Extensions > install from URL
+- 깃주소 ```https://github.com/Mikubill/sd-webui-controlnet```입력
+- 아래의 주소에서 'openpose' 모델 다운로드 (hugging face가 원본, civitai는 병합모델)
+- hugging face : https://huggingface.co/lllyasviel/ControlNet/tree/main/models
+- civitai : https://civitai.com/models/9251/controlnet-pre-trained-models
+- ```\stable-diffusion-webui\extensions\sd-webui-controlnet\models```에 파일옮기기
+- txt2img 하단의 controlNet, enable에 체크
+- 컨트롤넷 부연설명: https://arca.live/b/aiart/69724880
+
+---
+
+### controllnet - MLSD
+- 건물이나 인테리어 그리는데 특화
+![h:300](https://ac-p2.namu.la/20230214sac2/5d1235597bf1637e67fe05957d71c391261f55124bfd4d55a9f72ddad60e10f9.png?type=orig)
+
+---
+
+
+### ddetailer - 설치과정중에 오류가 많아 안쓰는게 낫겠다. wildcard와 충돌나서 exif가 저장되지 않음
+- 정보 출처 : https://arca.live/b/aiart/70355715
+- 깃주소 : https://github.com/dustysys/ddetailer
+- 익스텐션 설치후 시작에러가 남
+- 추가 설치 방법 : https://github.com/dustysys/ddetailer/issues/1#issuecomment-1309415543
+- https://visualstudio.microsoft.com/ko/downloads/ 에서 'Visual Studio 2022용 빌드 도구 '다운로드
+- 설치 프로그램을 실행하고 설치하기 전에 'Desktop development with C++'를 선택
+- C++를 사용한 테스크톱 개발
+
+---
+
+- 패키지가 자동으로 선택됩니다. 설치를 마침
+- 이후 신버전은 자동으로 업데이트 된다고 함, (★아래 절차를 수행할 필요 없음)
+- powershell(또는 명령 프롬프트) 열기
+- sd-webui 폴더로 이동하고 다음 명령을 실행합니다.
 ```
 venv\Scripts\activate
 pip install Cython
@@ -53,96 +196,118 @@ pip install "git+https://github.com/philferriere/cocoapi.git#egg=pycocotools&sub
 ```
 ---
 
-# ddetailer - 사용법
+### ddetailer - 사용법
 
-* 이 스크립트를 사용하면 와일드 카드가 적용이 안됨.
-* 설정법: https://arca.live/b/aiart/70368079
-* 심화편: https://arca.live/b/aiart/70372490
-* bbox - 얼굴만 감지
-* segm - 몸전체 감지
-
----
-
-# VAE
-* ```\stable-diffusion-webui\model\VAE``` 설치
-* 설치후 WebUI 재시작 ```settings > reload UI
-* WebUI | Settings > Stable Diffusion > SD VAE에서 선택 
-* 상단의 Apply settings 선택
+- 이 스크립트를 사용하면 와일드 카드가 적용이 안됨.
+- 설정법: https://arca.live/b/aiart/70368079
+- 심화편: https://arca.live/b/aiart/70372490
+- bbox - 얼굴만 감지
+- segm - 몸전체 감지
 
 ---
 
-# TEXTUAL INVERSION
-* ```\stable-diffusion-webui\embeddings``` 설치
-* trigger word를 입력하여 실행한다.
+### controllnet - pose editor extension
+- WebUI | Extensions > install from URL
+- 깃주소 : ```https://github.com/fkunn1326/openpose-editor``` 입력
+- 상단텝에 OpenPose Editor 생김
 
 ---
 
-## easynagative
-* https://civitai.com/models/7808/easynegative
+### Whild Card Extension
+- WebUI | extensions > install from url
+- URL for extension's git repository에 ```https://github.com/adieyal/sd-dynamic-prompts.git``` 입력
+- install 누름
+- ```stable-diffusion-webui\extensions\sd-dynamic-prompts```
+- whildcards 폴더가 없다면 새로 생성
+- 내부에 텍스트파일 생성, 단어나열
+- 프롬프트에 ```__TXT파일명__```으로 입력
+- ChatGPT에 ```show me words about 원하는카테고리 without explain``` 질문해서 단어를 뽑아낼 수 있음.
+---
+- ```show me random situation sentence, without explain```
+- ```show me words about 'actual eye color' without explain```
+- ```show me words about 'job and clothes' (for example 'boss, office suite') without explain```
+- ```show me words about 'job and clothes and object and place' (for example 'boss, office suite, Fountain pen, boss room') without explain```
+- ```Remind me by adding objects to all the jobs you've told me so far. (for example 'boss, office suite', 'fountain pen')```
+- ```show me random 'background visual description sentence', without explain```
+---
+
+### remove backgound
+- 깃주소: https://github.com/AUTOMATIC1111/stable-diffusion-webui-rembg
+
+<!-- ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ -->
+
+# ngrok
+- 포트포워딩 설정을 하지 않아도 주소를 통해 PC접속
+## ngrok 설치
+- ngrok: https://ngrok.com/
+- 다운로드하면 설치과정 없이 ngrok.exe파일이 있다.
 
 ---
 
-# controllnet
-* https://arca.live/b/aiart/69816884 설치 및 설정
-* WebUI | Extensions > install from URL
-* 깃주소 ```https://github.com/Mikubill/sd-webui-controlnet```입력
-* 아래의 주소에서 'openpose' 모델 다운로드 (hugging face가 원본, civitai는 병합모델)
-* hugging face : https://huggingface.co/lllyasviel/ControlNet/tree/main/models
-* civitai : https://civitai.com/models/9251/controlnet-pre-trained-models
-* ```\stable-diffusion-webui\extensions\sd-webui-controlnet\models```에 파일옮기기
-* txt2img 하단의 controlNet, enable에 체크
-* 컨트롤넷 부연설명: https://arca.live/b/aiart/69724880
+## rgrok 보안
+- 구동시 입력하면 특정 도메인 아이디만 접속 가능함.
+```
+ngrok http 8080 --oauth=google \
+    --oauth-allow-domain=acme.com,doe.com
+```
+- 구동시 입력하면 특정 구글 아이디만 접속 가능함.
+```
+ngrok http 7860 --oauth=google \
+    --oauth-allow-email=john@acme.com,jane@doe.com
+```
+---
+
+# painthua - outpainting
+- 정보 출처: https://www.youtube.com/watch?v=l6_ZCcHzq2E
+- 정보 출처: https://www.youtube.com/watch?v=RyFTYa1jzvM
+- https://www.painthua.com/
+- webui-user.bat 텍스트 에디터에서 열기
+- ```set COMMANDLINE_ARGS=```에 ```--api``추가
+- ```--port 7860 --cors-allow-origins=https://www.painthua.com``` 추가
 
 ---
 
-# controllnet - MLSD
-* 건물이나 인테리어 그리는데 특화
-![](https://ac-p2.namu.la/20230214sac2/5d1235597bf1637e67fe05957d71c391261f55124bfd4d55a9f72ddad60e10f9.png?type=orig)
+- webui.py에 ```app.user_middleware = [x for x in app.user_middleware if x.cls.__name__ != 'CORSMiddleware']``` 주석처리
+- [sd-v1.5-inpainting](https://huggingface.co/runwayml/stable-diffusion-inpainting/tree/main) 다운로드
+- ```\stable-diffusion-webui\models\Stable-diffusion```에 집어넣기
+- inpainting 모델만이 제대로 연결그림을 그려주는듯하고 다른 모델들은 반복그림만 만들어냄
 
 ---
 
-# controllnet - pose editor extension
-* WebUI | Extensions > install from URL
-* 깃주소 : ```https://github.com/fkunn1326/openpose-editor``` 입력
-* 상단텝에 OpenPose Editor 생김
+# painthua - setting
+- setting | stable diffusion > apply color correct to img2img result match original colors.
+- setting | user interface > Quicksetting list , inpainting_mask_weight
 
 ---
 
-# Extension
-## Whild Card Extension
-* WebUI | extensions > install from url
-* URL for extension's git repository에 ```https://github.com/adieyal/sd-dynamic-prompts.git``` 입력
-* install 누름
-* ```stable-diffusion-webui\extensions\sd-dynamic-prompts```
-* whildcards 폴더가 없다면 새로 생성
-* 내부에 텍스트파일 생성, 단어나열
-* 프롬프트에 ```__TXT파일명__```으로 입력
-* ChatGPT에 ```show me words about 원하는카테고리 without explain``` 질문해서 단어를 뽑아낼 수 있음.
----
-* ```show me random situation sentence, without explain```
-* ```show me words about 'actual eye color' without explain```
-* ```show me words about 'job and clothes' (for example 'boss, office suite') without explain```
-* ```show me words about 'job and clothes and object and place' (for example 'boss, office suite, Fountain pen, boss room') without explain```
-* ```Remind me by adding objects to all the jobs you've told me so far. (for example 'boss, office suite', 'fountain pen')```
-* ```show me random 'background visual description sentence', without explain```
----
+# 시작시
 
-# Web UI 구동
-* 시작 > cmd
-* webui-user.bat파일이 있는 곳으로 이동
-* webui-user.bat실행
+## Web UI 구동
+- 시작 > cmd
+- webui-user.bat파일이 있는 곳으로 이동
+- webui-user.bat실행
 
-* 해당파일의 바로가기 파일을 만들어서 실행해도 됨
-* 접속주소 :  http://127.0.0.1:7860
+- 해당파일의 바로가기 파일을 만들어서 실행해도 됨
+- 접속주소 :  http://127.0.0.1:7860
 
 ---
 
-# rgrok 구동
+## ngrok 구동
 ngrok
-* ngrok.exe http 7860로 외부주소에서 접속 가능하게함
-* 8시간의 세션만료시간이 있으니 홈페이지 가입후 키입력을 하면 제한 풀림
+- ngrok.exe http 7860로 외부주소에서 접속 가능하게함
+- 8시간의 세션만료시간이 있으니 홈페이지 가입후 키입력을 하면 제한 풀림
 
-* 배치(bat)파일만들어
+- 배치(bat)파일만들어
 ```start f:\ngrok\ngrok.exe http 7860``` 작성하면 쉽게 시동
+```start f:\ngrok\ngrok.exe http 7860 --oauth=google --oauth-allow-email=gunajona85@gmail.com,메일주소``` 접속제한 포함
+
+- 시동된 터미널 창에서 접속주소 확인
 
 ---
+
+# 번외
+## AI연구
+- https://www.reddit.com/r/StableDiffusion/comments/y0t4pd/a_bizarre_experiment_with_negative_prompts/
+- CFG를 음수(-)로 넣고 나온 이미지를 negative에 넣으면 이미지가 더 향상 된다.
+## 로라학습
+- https://arca.live/b/aiart/71481928

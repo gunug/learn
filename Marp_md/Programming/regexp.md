@@ -133,7 +133,114 @@ footer: 2023-03-10
 
 # Don't match more then you want to
 
-* `/th.*s/`
+* -- I want to match the words that start
+* -- with 'th' and end width 's'.
+* this, thus, thistle, this line matches too much
+
+
+## `/th.*s/`
 * -- I want to match `the words that s`tart
-* -- wi`th 'th' and end width 's`'
+* -- wi`th 'th' and end width 's'`'
 * `this`, `thus`, `this`tle, `this line matches` too much
+
+---
+
+# Tricks for restraining matches
+* `/th[^s]*./`
+* -- I want to match `the words that s`tart
+* -- wi`th 'th' and end width 's`'.
+* `this`, `thus`, `this`tle, `this` line matches too much
+
+---
+
+# A literal-string modification example 리터럴 문자열 수정예제
+* 원문 The zoo had wild dogs, bobcats, lions, and other wild cats.
+
+* `s/cat/dog/g`
+* 수정 후 The zoo had wild dogs, bab`dog`s, lions, and other wild `dog`s.
+
+* `s/cat|dog/snake/g`
+* 수정 후 The zoo had wild `snake`s, bob`snake`s, lions, and other wild `snake`s.
+
+* `s/[a-z]+i[a-z]*/nice/g`
+* 수정 후 The zoo had `nice` dogs, bobcats, `nice`, and other `nice` cats.
+
+---
+
+# Modification using backreferences 역참조를 사용한 수정
+* 원문 A37 B4 C107 D54112 E1103 XXX
+
+* `s/([A-Z])([0-9]{2,4}) /\2:\1 /g` 괄호()로 레퍼런스 등록 후. \2, \1로 레퍼런스(참조) 번호를 매길수 있음
+* 수정후 `37:A` B4 `107:C` D54112 `1103:E` XXX
+
+---
+
+# Non-greedy quantifiers
+
+* `/th.*s/`
+* -- I want to match `the words` that start
+* -- with '`th' and end width 's`'.
+* `this`, `thus`, `this`tle, `this` line matches too much
+
+* `/th.*?s/`
+* -- I want to match `the words that s`tart
+* -- with '`th' and end width 's`'.
+* `this`, `thus`, `this`tle, `this` line matches too much
+
+* `/th.*?s /`
+* -- I want to match `the words` that start
+* -- with 'th' and end width 's'.
+* `this`, `thus`, thistle, `this` line matches too much
+
+---
+
+# Pattern-match modifiers
+* MAINE # Massachusetts # Colorade #
+* sississippi # Missouri # Minnesota #
+
+* `/M.*[ise] /`
+* `MAINE # Massachusetts` # Colorade #
+* sississippi # `Missouri` # Minnesota #
+
+* `/M.*[ise] /gis`
+* `MAINE # Massachusetts # Colorade #`
+* `sississippi # Missouri` # Minnesota #
+
+---
+* A-xyz-37 # B:abcd:42 # C-wxy-66 # D-qrs-93
+# Changing backreference behavior
+* `s/([A-Z])(?:-[a-z]{3}-)([0-9]*)/\1\2/g`
+* `A37` # B:abcd:42 # `C66` # `D93`
+
+# Naming backreferences
+```
+import re
+txt = "A-xyz-37 # B:abcd:142 # C-wxy-66 # D-qrs-93"
+print re.sub("(?P<prefix>[A-Z])(-[a-z]{3}-)(?P<id>[0-9]*)","\g<prefix>\g<id>",txt)
+```
+* `A37` # B:abcd:42 # `C66` # `D93`
+
+---
+
+# Lookahead assertions
+
+* `s/([A-Z]-)(?=[a-z]{3})([a-z0-9]*)/\2\1/g`
+* A-xyz37 # B-ab6142 # C-Wxy66 # D-qrs93
+* `xyz37A-` # B-ab6142 # C-Wxy66 # `qrs93D-`
+
+* `s/([A-Z]-)(?![a-z]{3})([a-z0-9]*)/\2\1/g`
+* A-xyz37 # B-ab6142 # C-Wxy66 # D-qrs93
+* A-xyz-37 # `ab6142B-` # `Wxy66C-` # D-qrs-93
+
+---
+
+# Making regular expressions more readable
+```regexp
+/               # identify URLs within a text file
+[^="]           # do not match URLs in IMG tags like: <img src="http//mysite.com/mypic/png">
+http|ftp|gopher # make sure we find a resource type
+:\/\/           # ...needs to be followed by colon-slash-slash
+[^\n\r]+        # stuff other than space newline, tab is in URL
+(?=[\s\.,])     # assert: follow by whitespace/period/comma
+/
+```
