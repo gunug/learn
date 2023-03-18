@@ -77,7 +77,7 @@ void OnMouseDown() //마우스 왼쪽클릭
 }
 void OnMouseUp() //마우스 왼쪽클릭 해제
 {
-    Debog.log("mouse up!");
+    Debug.Log("mouse up!");
 }
 void OnMouseEnter() //마우스 올리기
 {

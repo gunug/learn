@@ -206,6 +206,12 @@ pip install "git+https://github.com/philferriere/cocoapi.git#egg=pycocotools&sub
 
 ---
 
+### DAAM
+* 프롬프로 적용 위치를 알려주는 기능
+* 설치불가, 처음개발한 사람이 업데이를 멈췄다고함
+* 깃주소: https://github.com/toriato/stable-diffusion-webui-daam
+---
+
 ### controllnet - pose editor extension
 - WebUI | Extensions > install from URL
 - 깃주소 : ```https://github.com/fkunn1326/openpose-editor``` 입력
