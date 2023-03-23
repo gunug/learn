@@ -6,7 +6,7 @@ class:
   - invert
 paginate: true
 header: C# Script
-footer: 2023-03-16 ~ 2023-03-17
+footer: 2023-03-16 ~ 2023-03-23
 ---
 
 # C# script
@@ -149,6 +149,13 @@ public int A = 10; //모든곳에서 접근 가능한 A라는 이름의 변수�
        target_animator.SetInteger("motion", 2); //Animator의 motion 값을 2로 변경
    }
 ```
+
+---
+
+# 참조 연결하기
+![bg right:40% w:500](../../Marp_images/Unity3d/drag_drop.png)
+- Heirarchy에 있는 Animation Root를 드래그 하여 target_animator에 드랍
+
 ---
 
 - 참고용 영상 : 오래전 제작된 영상입니다. 수업내용과 상이한 점이 많습니다. 문서만으로 내용이 어려울때 참고만 하세요.
