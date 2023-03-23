@@ -144,3 +144,8 @@ current_page = page_num;
 - https://easings.net/
 ![bg right:60% w:700](../../Marp_images/Unity3d/itween_ease.png)
 - iTween.EaseType.`easeOutElastic` 부분에 입력하여 다른 움직임 적용 가능
+
+---
+
+- 참고용 영상 : 오래전 제작된 영상입니다. 수업내용과 상이한 점이 많습니다. 문서만으로 내용이 어려울때 참고만 하세요.
+<iframe width="560" height="315" src="https://www.youtube.com/embed/AOFBlWIzzm8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>

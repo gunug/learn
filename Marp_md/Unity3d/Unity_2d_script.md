@@ -91,13 +91,13 @@ void OnMouseExit() //마우스 내리기
 ---
 # 콘솔창 실행
 ![bg right:40% w:500](../../Marp_images/Unity3d/Unity_2d_script8.png)
-* Mene | window > General > Console
+- Mene | window > General > Console
 
 ---
 
 # 버튼 테스트
-* 게임 시작 (한가운데 위 ▶ 재생 버튼)
-* Game 창에서 버튼을 클릭시 Console창에 글씨가 나오면 성공
+- 게임 시작 (한가운데 위 ▶ 재생 버튼)
+- Game 창에서 버튼을 클릭시 Console창에 글씨가 나오면 성공
 ![bg right:40% w:500](../../Marp_images/Unity3d/Unity_2d_script7.png)
 
 ---
