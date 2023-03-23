@@ -154,3 +154,63 @@ function solution(my_string, n) {
 ```
 
 ---
+
+# 문자열 치환하기
+```javascript
+function solution(my_string, letter) {
+    const re = new RegExp(`${letter}`, 'g'); 
+    var answer = my_string.replace(re,"");
+    return answer;
+}
+```
+```my_string.replaceAll(letter, "");```
+
+---
+* [문제링크](https://school.programmers.co.kr/learn/courses/30/lessons/120833)
+```javascript
+function solution(numbers, num1, num2) {
+    var str = numbers.join(''); //하나의 문자열로 합시기
+    var new_str = str.substr(num1,num2-num1+1); //시작인덱스와 끝인덱스 문자만 자르기
+    var answer = new_str.split(''); //각문자를 배열로 변환
+    answer = answer.map(Number); //배열에 들어간 각각의 문자열을 숫자로 치환
+    answer = answer.map(x => Number(x)); //상동
+    return answer;
+    //2가지 케이스에 대한 테스트 실패가 나옴
+}
+```
+```
+function solution(numbers, num1, num2) {
+    var answer = numbers.slice(num1,num2+1);
+    return answer;
+}
+```
+---
+
+# .slice, .splice
+* splice(start, deleteCount)
+* slice(begin, end)
+* splice 메소드는 기존 배열에 영향을 주지만 slice 메소드는 기존 배열에 영향을 주지않습니다
+
+---
+
+*[문제링크](https://school.programmers.co.kr/learn/courses/30/lessons/120835)
+```javascript
+    var rank = [...emergency];
+    rank.sort((a,b) => b-a); 
+    answer = emergency.map((x) => rank.indexOf(x)+1);
+    return answer;
+```
+
+---
+
+# 어떠한 숫자를 이루는 약수의 개수 == 순서쌍
+* [문제링크](https://school.programmers.co.kr/learn/courses/30/lessons/120836)
+```javascript
+function solution(n) {
+    var answer = 1;
+    for(var i=0; i<n; i++){
+        if(n%i == 0)answer++;
+    }
+    return answer;
+}
+```

@@ -96,6 +96,8 @@ GTX 1050, GTX 1050ti, GTX 1060, GTX 1070, GTX 1080, GTX 1650, GTX 1650s, GTX 165
 - ```\stable-diffusion-webui\model\Stable-diffusion```에 다운로드된 모델파일을 붙여넣기 하여 설치끝
 
 # VAE
+- kl-f8-anim2 VAE : https://huggingface.co/hakurei/waifu-diffusion-v1-4/tree/main/vae
+
 - ```\stable-diffusion-webui\model\VAE``` 설치
 - 설치후 WebUI 재시작 ```settings > reload UI
 - WebUI | Settings > Stable Diffusion > SD VAE에서 선택 
@@ -148,6 +150,22 @@ GTX 1050, GTX 1050ti, GTX 1060, GTX 1070, GTX 1080, GTX 1650, GTX 1650s, GTX 165
 <!-- ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ -->
 ## extension
 - extansion리스트 : https://arca.live/b/aiart/71470421
+
+## cutoff
+- 깃주소: https://github.com/hnmr293/sd-webui-cutoff
+- 사용법: https://arca.live/b/aiart/71809651
+
+---
+
+## Dynamic Thresholding
+* 깃주소 : https://github.com/mcmonkeyprojects/sd-dynamic-thresholding.git
+* 사용법: https://github.com/mcmonkeyprojects/sd-dynamic-thresholding/wiki
+* 유효한 입력의 예: 
+```
+Steps: 3, Mimic scale: 8, Threshold percentile: 90, Mimic mode: Power Up, Mimic scale minimum: 2, CFG mode: Power Up, CFG scale minimum: 2.5, Power Scheduler Value: 10
+```
+
+---
 
 ### tagcomplete
 - https://github.com/DominikDoom/a1111-sd-webui-tagcomplete
@@ -321,3 +339,9 @@ ngrok
 - CFG를 음수(-)로 넣고 나온 이미지를 negative에 넣으면 이미지가 더 향상 된다.
 ## 로라학습
 - https://arca.live/b/aiart/71481928
+## 병합모델의 상업적 이용권에 관한 이야기
+- https://arca.live/b/aiart/72197647
+## 모델병합관련 자료
+- https://arca.live/b/aiart/71966881
+## stable diffusion 정보
+- https://arca.live/b/aiart/71947912

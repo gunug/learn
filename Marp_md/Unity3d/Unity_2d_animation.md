@@ -6,7 +6,7 @@ class:
   - invert
 paginate: true
 header: 2D Animation
-footer: 2023-03-09
+footer: 2023-03-09 ~ 2023-03-23
 ---
 
 # 2D Animation
@@ -14,15 +14,16 @@ footer: 2023-03-09
 ---
 
 # Empty Game Object 만들기
-- GameObject는 유니티내의 최소 기본단위입니다.
-- 빈 게임오브젝트 (Empty Game Object)는 빈 폴더와 같은 역할을 합니다.
+- GameObject는 유니티내의 최소 기본단위
+- 빈 게임오브젝트 (Empty Game Object)는 빈 폴더와 같은 역할
+- Hierarchy창 마우스 우클릭 ```creat empty```
 
 ![bg right:40% w:500](../../Marp_images/Unity3d/Unity_2d_animation1.png)
 
 ---
 
-- 빈 게임오브젝트의 이름을 ```Animation Root```로 변경합니다.
-- Sprite명(예시의 경우는 Dog)을 드래그 드랍하여 Animation Root 안에 집어 넣습니다. (폴더안에 파일 넣는것과 동일)
+- 빈 게임오브젝트의 이름을 ```Animation Root```로 변경
+- Sprite명(예시의 경우는 Dog)을 드래그 드랍하여 Animation Root 안에 집어 넣기 (폴더안에 파일 넣는것과 동일)
 ![bg right:40% w:500](../../Marp_images/Unity3d/Unity_2d_animation2.png)
 
 ---
@@ -30,12 +31,12 @@ footer: 2023-03-09
 # Animation 창 열기
 - Menu | Window > Animation > Animation
 ![bg right:40% w:500](../../Marp_images/Unity3d/Unity_2d_animation3.png)
-- Animation창의 이름부분을 드래그하여 Game창 옆에 두면 탭이동하여 사용하기 수월 합니다.
+- Animation창의 이름부분을 드래그하여 Game창 옆에 두고 탭이동하여 사용
 
 ---
 
 # Animation 만들기
-- 주의! ```Animation Root```가 선택되어 있는지 있는지 꼭 확인합니다
+- 주의! ```Animation Root```가 선택되어 있는지 있는지 꼭 확인
 ![bg right:40% w:500](../../Marp_images/Unity3d/Unity_2d_animation3_1.png)
 
 ---
