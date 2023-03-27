@@ -1,12 +1,31 @@
 ---
 marp: true
-theme: uncover
-class: invert
+theme: a4
+class:
+  - lead
+  - invert
 paginate: true
-header: visual studio code install
-footer: 2023.01.12
+header: visual studio code 설치, 연결
+footer: 2023-03-17 ~ 2023-03-27
+---
+
+# visual studio code 설치, 연결
+- 기본으로 설치된 visual studio가 실행되지 않거나 라이선스 만료일때
+- 다운로드 및 설치 : https://code.visualstudio.com/
+- 다이렉트로 설정하기 : https://code.visualstudio.com/docs/other/unity
+- menu | edit>preference>external tools>external script editor>visual studio community 선택
+
 ---
 
 # HTML 뷰어 설치
+![bg right:40% w:500](../../Marp_images/Education/html_viewer.png)
+* html 문서 실시간으로 반영되는 것을 확인하고자 할때 (Chrome 브라우저가 더 나을수도)
 
-![w:700](https://lh3.googleusercontent.com/HSGxWpmgGWW0k3oImkTw_QmYv2uCxKqumSuKAgRiJP1S1EU5avmKkJJGHklvAqAZFdAaxdNiaaCA6RsNHpU6llgH-5w7q2tenhsAlzyrqegw-4uWwzvLb8fUmEnxr7Nvoc2ynR7UYxCvZeMha_ozIpYBcEUKBnsCS1zxyfDuqm2wBHJH_bwayubfbNbpG9tnMeh7fPAWcm-scYYNegZlLj9qf9d-kBRuINH3VH_fLhjnRBo7uaPUr_HPRSaevGJ3dG8_e4Do6cWzduYeTj-a3tetwdOVhMuI2R1FYQDTasTOjDAnWfGQq-1a9m_xQ7rvrVVqwhKwp7PEh23e_mYgiR9nYGUBMDdbsXnF7UFi61sYB5UFtEzSYSh1C43Qan7E_hYoiCHwMzWNqdxCYnjEo-M0qL3TiQYZC42nkITcPbzz-TAdRo7Ma-zHJCjbLdHN95UOX254c3vuOfUn-v2hr6RzgtTKTo4qQj4BcoPnweA9auKpVsK_1jTbnhRDeXU4FgGtOZy7rDk5i38o-VglpFZhOlOIACHGS1ETtT_n65UCVfy_SBwmWyVqe4dkSD5AV-yIH2KCFHRyDtpzNFHvC_oaVfjyStXpc3wqn07-Dw6MTL3QYQULdsI0qGP3eqZRzI7fhGPFxyZKmvHBgnQTkJBz2IOOvdsEnD2FoYiiOplGywsP-cwOI_gs7-T6keaVciGvjR9IhS0aj67wtBMUoq1p4pNMs8E3NyLf6MWfBt1tg23YMLJ7xBkiKlGNXPLdq8gBZDANHajsHa09Y7EgZEkUMW2NBDQx2Qv7Pf0J1lzSHuXTm5OzkxCU6Zm1Sa7msYUBq2M5-bNTzBiPay4-lc7q9g7tLOr1xc8mXTg5KSr8N2mEFi_bh_gO3mHgPmDtQYoG6oLrjp4bbvtXHNT-6ceJRbo19mJnBGyPJWbf6k3-EBxR8w=w1066-h600-no?authuser=0)
+---
+
+# 한글에 네모 표시
+* Ctrl + , :셋팅창 열기
+* 검색창에 Unicode 검색
+* Editor › Unicode Highlight: Non Basic ASCII
+* Editor › Unicode Highlight: Include String
+* 둘다 false로 변경
