@@ -19,13 +19,13 @@ footer: 2023-03-17 ~ 2023-03-27
 
 # HTML 뷰어 설치
 ![bg right:40% w:500](../../Marp_images/Education/html_viewer.png)
-* html 문서 실시간으로 반영되는 것을 확인하고자 할때 (Chrome 브라우저가 더 나을수도)
+- html 문서 실시간으로 반영되는 것을 확인하고자 할때 (Chrome 브라우저가 더 나을수도)
 
 ---
 
 # 한글에 네모 표시
-* Ctrl + , :셋팅창 열기
-* 검색창에 Unicode 검색
-* Editor › Unicode Highlight: Non Basic ASCII
-* Editor › Unicode Highlight: Include String
-* 둘다 false로 변경
+- Ctrl + , :셋팅창 열기
+- 검색창에 Unicode 검색
+- Editor › Unicode Highlight: Non Basic ASCII
+- Editor › Unicode Highlight: Include String
+- 둘다 false로 변경
