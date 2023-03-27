@@ -228,6 +228,17 @@ pip install "git+https://github.com/philferriere/cocoapi.git#egg=pycocotools&sub
 
 ---
 
+### civitai helper
+* git:https://github.com/butaixianran/Stable-Diffusion-Webui-Civitai-Helper
+* menu | Civitai hepler > scan
+* 로딩 완료되면 화투패
+* 🖼: 원래 있던 미리보기 이미지 교체
+* 🌐: Civitai에 모델이 있다면 거기로 링크
+* 💡:자기 프롬프트에 이 모델의 트리거 단어 추가
+* 🏷: 현재 이 모델 미리보기 이미지에 사용했던 프롬프트를 불러옴
+
+---
+
 ### DAAM
 * 프롬프로 적용 위치를 알려주는 기능
 * 설치불가, 처음개발한 사람이 업데이를 멈췄다고함

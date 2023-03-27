@@ -214,3 +214,62 @@ function solution(n) {
     return answer;
 }
 ```
+---
+
+# 모스부호 치환
+* [문제링크](https://school.programmers.co.kr/learn/courses/30/lessons/120838)
+```javascript
+function solution(letter) {
+    morse = { 
+    '.-':'a','-...':'b','-.-.':'c','-..':'d','.':'e','..-.':'f',
+    '--.':'g','....':'h','..':'i','.---':'j','-.-':'k','.-..':'l',
+    '--':'m','-.':'n','---':'o','.--.':'p','--.-':'q','.-.':'r',
+    '...':'s','-':'t','..-':'u','...-':'v','.--':'w','-..-':'x',
+    '-.--':'y','--..':'z'
+    }
+    var arr = letter.split(" ");
+    for(var i=0; i<arr.length; i++){
+        arr[i] = morse[arr[i]];
+    }
+    var answer = arr.join("");
+    return answer;
+}
+```
+* ```letter.split(' ').map(v=>morse[v]).join('');```
+* ```return letter.split(' ').reduce((prev, curr) => prev + morse[curr], '')```
+
+---
+# 가위바위보 - 글자 치환
+* 삼항연산자 : https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/Conditional_Operator
+* [문제링크](https://school.programmers.co.kr/learn/courses/30/lessons/120839)
+```javascript
+function solution(rsp) {
+    var arr = rsp.split("");
+    arr = arr.map((x) => x==2 ? 0 : x==0 ? 5 : 2);
+    var answer = arr.join("");
+    return answer;
+}
+```
+
+---
+
+# 경우의 수 계산 - 팩토리얼
+* [문제링크](https://school.programmers.co.kr/learn/courses/30/lessons/120840)
+```javascript
+function solution(balls, share) {
+    //balls!/(balls-share)!*share!
+    console.log(fectorial(2));
+    var answer = Math.round(fectorial(balls)/(fectorial(balls-share)*fectorial(share)));
+    return answer;
+}
+function fectorial(num){
+    if (num < 0){
+        return -1;
+    }else if(num==0){
+        return 1;  
+    } else {
+        return num*fectorial(num-1);    
+    }
+}
+```
+* Math.round는 왜? 부동소숫점 오류 - https://joooing.tistory.com/entry/Javascript-%EC%86%8C%EC%88%98%EC%A0%90floating-point-%EA%B3%84%EC%82%B0-%EC%98%A4%EB%A5%98

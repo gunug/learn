@@ -115,6 +115,7 @@ private void OnMouseDown()
 ![bg right:40% w:500](../../Marp_images/Unity3d/image_gallery4.png)
 - 버튼 이미지를 scene에 올리고 ```add component``` Physics 2d > box collider 2d 추가
 - 작성된 ImageButton.cs를 드래그 드랍으로 버튼 이미지에 전달
+- Target_page 부분의 숫자를 각각의 버튼 순서에 맞게 입력 (0부터 시작)
 
 ---
 
