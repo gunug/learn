@@ -273,3 +273,25 @@ function fectorial(num){
 }
 ```
 * Math.round는 왜? 부동소숫점 오류 - https://joooing.tistory.com/entry/Javascript-%EC%86%8C%EC%88%98%EC%A0%90floating-point-%EA%B3%84%EC%82%B0-%EC%98%A4%EB%A5%98
+
+---
+
+# 구조 분해
+
+```javascript
+function solution(dot) {
+    const [num,num2] = dot;
+    const check = num * num2 > 0;
+    return num > 0 ? (check ? 1 : 4) : (check ? 3 : 2);
+}
+```
+
+---
+
+# 배열에 갑추가, 빼기
+* .push() : 배열의 맨 끝에 값을 추가한다.
+* .unshift() : 배열의 맨 앞에 값을 추가한다.
+
+##배열에 값을 제거하는 함수
+* .pop() : 배열의 맨 끝에 값을 제거한다.
+* .shift() : 배열의 맨 앞에 값을 제거한다.
