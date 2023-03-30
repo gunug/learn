@@ -295,3 +295,33 @@ function solution(dot) {
 ##배열에 값을 제거하는 함수
 * .pop() : 배열의 맨 끝에 값을 제거한다.
 * .shift() : 배열의 맨 앞에 값을 제거한다.
+
+---
+
+# 정규표현식
+* [^0-9] : 숫자가 아니면
+* [0-9] : 숫자면
+* [\d] : desimal 이면
+* [^\d] : desimal 아니면
+* [a-zA-Z] : 영문이면
+* [^a-zA-Z] : 영문이 아니면
+
+---
+
+# 소인수 분해 하기
+* [문제링크](https://school.programmers.co.kr/learn/courses/30/lessons/120852)
+```javascript
+function solution(n) {
+    var arr = [];
+    for(var i=2; i<=n; i++){
+        if(n%i==0){
+            arr.push(i); //소인수 입력
+            n=n/i; //소인수값으로 나눔
+            i--; //값이 나누어 떨어지면 재시도
+        }
+    }
+    arr = arr.filter((v, i) => arr.indexOf(v) === i) //중복제거
+    var answer = arr;
+    return answer;
+}
+```
