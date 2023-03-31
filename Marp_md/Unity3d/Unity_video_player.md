@@ -130,7 +130,9 @@ public class VideoButton : MonoBehaviour
 
 - 새 스크립트명은 VolumeButton
 ```C# script
-UnityEngine; 
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.Video;
 
 public class toggle : MonoBehaviour {
