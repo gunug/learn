@@ -157,6 +157,17 @@ GTX 1050, GTX 1050ti, GTX 1060, GTX 1070, GTX 1080, GTX 1650, GTX 1650s, GTX 165
 
 ---
 
+# 리얼타임 블록머지
+* 실시간으로 모델을 블럭머지하여 이미지 생성에 반영함 (모델병합 프로토용)
+* 깃주소 : https://github.com/ashen-sensored/sd-webui-runtime-block-merge
+* Merge Block Weighted
+
+# 블록머지
+* 깃주소 : https://github.com/bbc-mc/sdweb-merge-block-weighted-gui
+* 토큰을 골라서 병합치를 조절할 수 있는듯 하다.
+
+---
+
 ## Dynamic Thresholding
 * 깃주소 : https://github.com/mcmonkeyprojects/sd-dynamic-thresholding.git
 * 사용법: https://github.com/mcmonkeyprojects/sd-dynamic-thresholding/wiki

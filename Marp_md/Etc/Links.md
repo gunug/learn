@@ -20,3 +20,7 @@ footer: 2023-03-27
 
 # AcgamR1 클론 리모컨을 nano 33 ble와 연결. 45초후 연결이 끊어짐
 * https://github.com/arduino-libraries/ArduinoBLE/issues/172
+
+---
+
+* 식물 생장용 LED : https://bissolled.com/shop/list.php?ca_id=10

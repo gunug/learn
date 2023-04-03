@@ -325,3 +325,77 @@ function solution(n) {
     return answer;
 }
 ```
+
+* 컨트럴 제트
+* [문제링크](https://school.programmers.co.kr/learn/courses/30/lessons/120853)
+```javascript
+function solution(s) {
+    var ss = s.split(" ");
+    var keep = ss[0];
+    var answer = ss.reduce((a,b) => {
+        if(b!="Z"){
+            a = Number(a);
+            b = Number(b);
+            keep = b;
+            return (a+b);
+        }else{
+            a = Number(a);
+            return (a-keep);
+        }
+    });
+    return answer;
+}
+```
+* 테스트케이스 678번 실패
+```javascript
+function solution(s) {
+    var ss = s.split(" ").map(Number);
+    var answer = ss.reduce((acc,current,index,arr) => !isNaN(current)?acc+current:acc-arr[index-1]);
+    return answer;
+}
+```
+* keep이라고 해서 숫자를 저장하는 방식이 문제였나 본데
+---
+
+# reduce
+* https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce
+* 매개변수
+```javascript 
+arr.rebuce((accumulator,currentValue,currentIndex,array)=>{return 연산후값},initialValue); 
+```
+```javascript 
+arr.rebuce((acc,current,index,arr)=>{return 연산후값},init); 
+```
+* callbackFn : 배열의 각 요소에 실행할 함수
+* accumulator : 이전 호출의 결과값
+* currentValue : 현재 요소의 값
+* currentIndex : 배열에서 인덱스 위치
+* array : 배열
+* initialValue : 콜백이 처음 호출될 때 초기화되는 값
+
+---
+
+# 369
+* [문제링크](https://school.programmers.co.kr/learn/courses/30/lessons/120891)
+```javascript
+function solution(order) {
+    var arr = order.toString().split('');
+    console.log(arr);
+    var answer = arr.reduce((a,b) => a+(b==3)+(b==6)+(b==9), 0);
+    return answer;
+}
+```
+* 숫자에 블린을 덧셈해서 카운트에 사용하기도 하네
+
+
+---
+
+# 아스키코드
+* 참고 링크 : https://developer-talk.tistory.com/880
+```javascript
+문자열.charCodeAt(0); //0번째 글자의 아스키코드 반환
+String.fromCharCode(); //UTF-16코드를 문자로 반환
+문자열.codePointAt(); //charCodeAt과 유사하나 표현할수 있는 정수의 범위가 더 크다
+String.fromCodePoint(code1,code2 ... codeN); //지정된 코드 포인트 시퀀스를 문자열로 변환
+```
+---
