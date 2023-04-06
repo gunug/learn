@@ -367,3 +367,11 @@ ngrok
 - https://arca.live/b/aiart/71966881
 ## stable diffusion 정보
 - https://arca.live/b/aiart/71947912
+
+---
+
+속도향상
+* https://developer.download.nvidia.com/compute/redist/cudnn/v8.7.0/local_installers/11.8/
+* https://www.youtube.com/watch?v=KspDSmfVOME
+* cudnn-windows-x86_64-8.7.0.84_cuda11-archive 다운로드
+* 압축 해제후 bin 폴더에 있는 dll모두
