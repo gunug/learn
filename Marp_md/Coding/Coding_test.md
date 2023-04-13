@@ -196,7 +196,7 @@ function solution(numbers, num1, num2) {
 *[문제링크](https://school.programmers.co.kr/learn/courses/30/lessons/120835)
 ```javascript
     var rank = [...emergency];
-    rank.sort((a,b) => b-a); 
+    rank.sort((a,b) => b-a);
     answer = emergency.map((x) => rank.indexOf(x)+1);
     return answer;
 ```
@@ -398,4 +398,151 @@ String.fromCharCode(); //UTF-16코드를 문자로 반환
 문자열.codePointAt(); //charCodeAt과 유사하나 표현할수 있는 정수의 범위가 더 크다
 String.fromCodePoint(code1,code2 ... codeN); //지정된 코드 포인트 시퀀스를 문자열로 변환
 ```
+---
+
+# 필터
+* [문제링크](https://school.programmers.co.kr/learn/courses/30/lessons/120905)
+
+```javascript
+function solution(n, numlist) {
+    var answer = numlist.filter(x => x%n==0);
+    return answer;
+}
+```
+---
+
+# 자릿수 더하기
+* [문제링크](https://school.programmers.co.kr/learn/courses/30/lessons/120906)
+```javascript
+function solution(n) {
+    var arr = [...n.toString()];
+    var answer = arr.reduce((a,b)=>Number(a)+Number(b));
+    return answer;
+}
+```
+* 에러 : reduce에 초기값이 없음으로 초기값이 string으로 시작됨
+* ```arr.reduce((a,b)=>Number(a)+Number(b),0);```으로 초기값을 잡고 시작하거나 arr을 map(Number)하여 숫자로 변환 후 사용
+
+---
+
+# 문자열 검사
+* [문제링크](https://school.programmers.co.kr/learn/courses/30/lessons/120908)
+```javascript
+function solution(str1, str2) {
+    var regex = new RegExp(`${str2}`, 'g');
+    var answer = regex.test(str1)?1:2;
+    return answer;
+}
+```
+
+---
+
+# 제곱근 정수 판별
+```javascript
+function solution(n) {
+    var sqrt = Math.sqrt(n);
+    var answer = sqrt==Math.floor(sqrt)?1:2;
+    return answer;
+}
+```
+
+---
+
+# 문자열 치환
+* [문제링크](https://school.programmers.co.kr/learn/courses/30/lessons/12951)
+```javascript
+function solution(s) {
+    var answer = s.toLowerCase();
+    var regex = /^\w| \w/g; //문자로 시작하거나(|)스페이스가 앞에 붙은 문자
+    answer = answer.replaceAll(regex,function(v){
+        return v.toUpperCase();
+    });
+    return answer;
+}
+```
+
+---
+
+
+# 괄호
+* [문제링크](https://school.programmers.co.kr/learn/courses/30/lessons/12909)
+```javascript
+function solution(s){
+    var regex = /\(\)/gm;
+    while(regex.test(s)){
+        s = s.replaceAll(regex,"");
+    }
+    return s.length == 0;
+}
+```
+* 리플레이스로 해결하려하니 효율성 테스트에서 실패
+
+```javascript
+function solution(s){
+    var arr = [...s];
+    var counter = arr.reduce((a,b)=>b==")"?a-1:a+1,0);
+    return counter==0 && arr[0]=="(";
+}
+```
+* 플러스마이너스 0이고 (로 시작한다면. 통과
+* 갯수만 가지고는 안되나? ())(() 반례
+
+```javascript
+function solution(s){
+    var arr = [...s];
+    var counter = arr.reduce((a,b)=>b=="("?a+1:a>0?a-1:a-100,0);
+    console.log(counter);
+    return counter == 0;
+}
+```
+* 시간초과
+* 테스트 17 〉	통과 (2.21ms, 33.5MB)
+* 테스트 18 〉	통과 (3.40ms, 33.5MB)
+```javascript
+function solution(s){
+    var arr = [...s];
+    var counter = 0;
+    for(var i=0; i<arr.length; i++){
+        counter = arr[i]=="("?counter+1:counter>0?counter-1:counter-100
+    }
+    console.log(counter);
+    return counter == 0;
+}
+```
+* 같은내용을 reduce가 아닌 for로 돌려서 해결
+* 테스트 17 〉	통과 (2.25ms, 33.6MB)
+* 테스트 18 〉	통과 (3.30ms, 33.5MB)
+* 테스트 케이스에서는 차이가 별로 안나는데.
+
+---
+
+# 문자의 사용 만족
+```javascript
+function solution(spell, dic) {
+    var answer = 0;
+    var exist = true;
+    for(var i=0;i<dic.length; i++){
+        if(dic[i].length != spell.length) continue; //글자수가 안맞으면 넘어가
+        console.log(dic[i]);
+        exist = true;
+        for(var j=0; j<spell.length; j++){
+            dic[i] = dic[i].replace(spell[j],"");
+            if(dic[i].length != spell.length-1-j){ //두개이상 지워지면 넘어가
+                exist = false;
+                break;
+            }
+        }
+        if(exist)return 1;
+    }
+    return 2;
+}
+```
+
+
+```javascript
+function solution(p, d) {
+    return d.some(s => p.sort().toString() == [...s].sort().toString()) ? 1 : 2;
+}
+```
+
 ---

@@ -11,6 +11,8 @@ footer: 2023-03-10
 
 # 정규표현식 (Regexp, Regular expression)
 * 특정 규칙을 가진 문자열의 집합을 표현하는데 사용하는 형식언어
+* 정규표현식 테스트 사이트 : https://regex101.com/
+* 정규식 체크 : https://velog.io/@rimo09/%EC%A0%95%EA%B7%9C%EC%8B%9D-%EC%B2%B4%ED%81%AC
 
 ---
 
@@ -244,3 +246,31 @@ http|ftp|gopher # make sure we find a resource type
 (?=[\s\.,])     # assert: follow by whitespace/period/comma
 /
 ```
+---
+
+식
+\s         공백문자(스페이스,탭등)
+\*          *
+\D        숫자가 아닌 문자
+^           문자의 시작부분  ex)/^The/i
+$           문자열 끝부분                     ex)/end$/ 
+\w       알파벳,숫자,밑줄기호(_)
+[^0-9]    숫자를 제외한
+[0-9]     숫자만
+[A-Za-z]알파벳 대소문자
+|           or
+s{2}      s의 두번 반복  {반복 횟수}
+
+속성
+g            전역 매칭
+m           여러 줄 매칭
+i             대소문자 구분 않음
+
+문자 매칭
+
+*           0회 이상 반복
++           1회 이상 반복
+?           0 or 1개의 문자 매칭
+.           1개의 문자 매칭
+
+---

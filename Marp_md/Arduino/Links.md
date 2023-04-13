@@ -24,3 +24,7 @@ footer: 2023-03-27
 ---
 
 * 식물 생장용 LED : https://bissolled.com/shop/list.php?ca_id=10
+
+---
+
+* 디지털 액자 하우징, 아두이노 소스 : https://www.thingiverse.com/thing:4845299/files
