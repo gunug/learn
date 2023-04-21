@@ -77,7 +77,7 @@ void loop() {
 # Kalman Filter Library
 
 - https://github.com/TKJElectronics/KalmanFilter
-- ```Tools > Manage Libraries....```
+- ```Tools > Manage Libraries....``` ```툴 > 라이브러리 관리```
 - Search for “Kalman Filter Library” library and install the [latest version .]
 - "SimpleKalmanFilter" : https://github.com/denyssene/SimpleKalmanFilter
 ``` c++

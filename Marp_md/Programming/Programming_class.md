@@ -57,3 +57,99 @@ public class People
 	}
 }	
 ```
+---
+# virtual
+```c#
+public class Animal
+{
+   public virtual void Speak()
+   {
+        Console.WriteLine("Nothing!");
+   }
+}
+ 
+public class Dog : Animal
+{
+    public override void Speak()
+    {
+        Console.WriteLine("멍멍!");
+    }
+}
+ 
+Dog temp = new Dog();
+temp.Speak();//멍멍!
+```
+---
+# abstract
+```c#
+public abstract class Animal
+{
+    public abstract void Speak();
+    
+}
+ 
+public class Dog : Animal
+{
+    public override void Speak()
+    {
+        Console.WriteLine("멍멍!");
+    }
+}
+ 
+  Dog temp = new Dog();
+  temp.Speak();//멍멍!
+```
+
+---
+
+# interface
+```c#
+public interface Animal
+{
+    void Speak();
+ 
+    string Name
+    {
+        get;
+        set;
+    }
+  
+}
+ 
+class Dog : Animal
+{
+    private string name;
+ 
+    public void Speak()
+    {
+        Console.WriteLine(name + "->멍멍!");
+    }
+ 
+    public string Name
+    {
+        get
+        {
+            return name;
+        }
+        set
+        {
+            name = value;
+        }
+    }
+}
+ 
+Dog temp = new Dog();
+temp.Name = "흰둥이";
+temp.Speak(); //흰둥이->멍멍!
+```
+
+---
+
+# override
+```c#
+public override void Setup(string name){
+	// 기반 클래스의 Setup 메소드 호출
+	base.Setup(name);
+
+	//추가내용 작성
+}

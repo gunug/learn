@@ -326,6 +326,23 @@ function solution(n) {
 }
 ```
 
+```javascript
+function prime_factor(n){
+    var arr = [];
+    for(var i=2; i<=n; i++){
+        if(n%i==0){
+            arr.push(i); //소인수 입력
+            n=n/i; //소인수값으로 나눔
+            i--; //값이 나누어 떨어지면 재시도
+        }
+    }
+    arr = arr.filter((v, i) => arr.indexOf(v) === i)
+    //중복제거
+    return arr;
+}
+
+```
+
 * 컨트럴 제트
 * [문제링크](https://school.programmers.co.kr/learn/courses/30/lessons/120853)
 ```javascript
@@ -546,3 +563,61 @@ function solution(p, d) {
 ```
 
 ---
+
+# fill
+* arr3.fill('A', 1, 3);
+* 인덱스 1부터 3 까지 'A'로 채움
+
+---
+
+# 등수매기기
+* [문제링크](https://school.programmers.co.kr/learn/courses/30/lessons/120882)
+```javascript
+function solution(score) {
+    var i=0;
+    score = score.map(function(v){return (v[0]+v[1])/2;}); //평균내기
+    var arr = [...score];
+    arr.sort((a,b)=>b-a); //등수내기
+    console.log(arr);
+    var answer = score.map(v => arr.indexOf(v)+1); //현점수가 몇순위인지 확인하여 배열에 넣기
+    return answer;
+}
+```
+
+---
+
+# 십진수 이진수
+```javascript
+function solution(bin1, bin2) {
+    var de1 = parseInt(bin1, 2); //2진수를 10진수로
+    var de2 = parseInt(bin2, 2);
+    console.log(de1);
+    console.log(de2);
+    var answer = (de1+de2).toString(2); //10진수를 2진수로
+    return answer;
+}
+```
+
+---
+
+# 배열의 비교
+```javascript
+const equals = (a, b) => a.length === b.length && a.every((v, i) => v === b[i]);
+function solution(before, after) {
+    var arr1 = [...before];
+    var arr2 = [...after];
+    arr1 = arr1.sort();
+    arr2 = arr2.sort();
+    console.log(arr1);
+    console.log(arr2);
+    var answer = equals(arr1, arr2);
+    return answer;
+}
+```
+
+---
+
+# 문자열내 포함여부
+1. String.indexOf(): 문자열에 어떤 문자열이 포함되어있는지 확인
+2. String.includes(): 문자열에 어떤 문자열이 포함되어 있는지 확인
+3. String.startsWith(), String.endsWith(): 문자열이 어떤 문자열로 시작하거나 끝나는지 확인
