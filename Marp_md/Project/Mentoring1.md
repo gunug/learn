@@ -134,6 +134,7 @@ private IEnumerator Attack()...
 # Unity UI , UI Toolkit
 - UI Toolkit download: https://unity.com/kr/features/ui-toolkit
 - UI Toolkit 설명 : https://mechurak.github.io/2023-02-24_unity_ui_toolkit/
+- Navagation view : https://www.youtube.com/watch?v=XymkbKQRih8
 
 ---
 
@@ -215,3 +216,7 @@ private IEnumerator Attack()...
 - https://www.youtube.com/watch?v=LNLVOjbrQj4
 
 ---
+
+# 그래서 추천하는 방식
+- 참고 자료가 될만한 다른 게임을 선정할것 (기획, 기능개발, 레벨 디자인, 리소스 제작에 도움이됨)
+- 주 개발내용이 아닌것은 Asset Store에서 무료버전이나 구입하여 사용할것

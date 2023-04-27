@@ -6,7 +6,7 @@ class:
   - invert
 paginate: true
 header: 아두이노
-footer: 2023-04-18
+footer: 2023-04-18 ~2023-04-25
 ---
 
 * 문서 > Arduino > libraries
@@ -30,3 +30,98 @@ footer: 2023-04-18
 ---
 
 * 소프트웨어 시리얼: https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=roboholic84&logNo=220550737629
+
+---
+
+# 명령어
+## shift out
+* shiftOut(dataPin, clockPin, bitOrder, value)
+* bitOrder : 바이트순서, 낮은비트가 먼저오는지 높은 비트가 먼저오는지
+## pulse in
+* unsigned long pulseIn(pin, value)
+* 디지털 입력핀으로 들어오는 펄스의 길이를 측정
+* 적외선 센서나 가속도 센서
+* time = pulsein(7,HIGH) //7번핀에 얼마나 오랬동안 HIGH인지
+## constrain (value, min, max)
+* value 값을 min과 max사이로 제약하여 리턴
+## map (value, fromLow, fromHigh, toLow, toHigh)
+
+---
+
+## randomSeed
+* randomSeed(analogRead(5)); //5번핀의 노이즈값을 랜덤의 seed로 이용하기
+* random(max); //이경우 min은 0
+* random(min,max);
+
+## Serial
+* Serial.print(value, encoding)
+* encoding : DEC, HEX, OCT, BIN, BYTE : 10진수, 16진수, 8진수, 2진수, 바이트
+* Serial.println(value, encoding) : 캐리지 리턴과 줄마꿈(/r/n)이 추가됨
+* Serial.available() : 시리얼 포트에 읽지 않은 바이트가 얼마나 있는지 확인
+* Serial.read() : 시리얼 포트에서 바이트 읽어오기
+* Serial.flush() : 시리얼 버퍼를 내리기 (아두이노가 처리할 수 있는 데이터량 보다 많은량의 시리얼이 들어올때 처리하는 방법)
+
+---
+
+* bitRead(B00100111,0); //0번주소의 비트 읽기
+* B00100111식으로 2진수값 입력 가능
+
+---
+
+# 7segment
+```C++
+#define A 6
+#define B 7
+#define C 8
+#define D 9
+#define E 10
+#define F 12
+#define G 11
+#define SW1 3
+#define SW0 2
+
+int segments[10] = {
+  B1111110, //0
+  B0110000, //1
+  B1101101, //2
+  B1111001, //3
+  B0110011, //4
+  B1011011, //5
+  B1011111, //6
+  B1110000, //7
+  B1111111, //8
+  B1111011, //9
+};
+void setup()
+{
+  pinMode(A, OUTPUT);
+  pinMode(B, OUTPUT);
+  pinMode(C, OUTPUT);
+  pinMode(D, OUTPUT);
+  pinMode(E, OUTPUT);
+  pinMode(F, OUTPUT);
+  pinMode(G, OUTPUT);
+  pinMode(SW1, INPUT);
+  pinMode(SW0, INPUT);
+}
+
+void loop()
+{
+  for(int i=0; i<10; i++){
+    int value = segments[i];
+    digitalWrite(A, bitRead(value,6)); 
+    digitalWrite(B, bitRead(value,5)); 
+    digitalWrite(C, bitRead(value,4)); 
+    digitalWrite(D, bitRead(value,3));  
+    digitalWrite(E, bitRead(value,2));  
+    digitalWrite(F, bitRead(value,1));  
+    digitalWrite(G, bitRead(value,0));
+    delay(200);
+  }
+  
+  int value  = digitalRead(9);
+  digitalWrite(LED_BUILTIN, value);
+  delay(10);
+  Serial.println("test");
+}
+```
