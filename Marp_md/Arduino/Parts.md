@@ -20,6 +20,9 @@ footer: 2023-04-12
 * PIR Sensor (동작감지센서) : https://www.devicemart.co.kr/goods/view?no=1342156
 * 빗물 감지 센서 : https://www.devicemart.co.kr/goods/view?no=1327430﻿
 
+* DC 모터 드라이버 : https://www.devicemart.co.kr/goods/view?no=1278835
+* Mosfet DC 모터 드라이버 : https://www.vctec.co.kr/product/detail.html?product_no=17527&cate_no=204&display_group=1&cafe_mkt=naver_ks&NaPm=ct%3Dlh7c3mwg%7Cci%3D0c6f2250ba54ec2e8e1c0467aaa2a7670fb31624%7Ctr%3Dsls%7Csn%3D246260%7Chk%3D0dc6fc680b00147fb04a4a50b696f377e534b683
+
 ---
 
 * 2.4인치 TFT LCD : https://www.devicemart.co.kr/goods/view?no=1377405

@@ -125,3 +125,42 @@ void loop()
   Serial.println("test");
 }
 ```
+
+---
+
+# interrupt
+* 자료 : https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=yuyyulee&logNo=220310875023
+* attachInterrupt(intNo, ISR, mode)
+* intNo : 인터럽트 번호
+* ISP : 인터럽트 발생시 호출될 함수 이름
+* mode : 인터럽스 모드 선택, Falling, Rising, Change, Low
+
+---
+
+# intNo 
+* 각 인터럽트번호(0~5)에 대한 핀번호
+* 메가 : 2,3,21,20,19,18
+* 우노 : 2,3
+
+---
+
+# mode
+* FALLING = HIGH -> LOW
+* RISING = LOW -> HIGH
+* CHANGE = FALLING + RISING
+* LOW = LOW인 경우 발생, LOW인 동안 반복 호출
+
+* FALLING,CHANGE -> LOW -> CHANGE,RISING
+* detachInterrupt(intNo) 인터럽트 제거
+
+---
+
+```C++
+goto label;
+
+label:
+   //statements
+```
+
+---
+
