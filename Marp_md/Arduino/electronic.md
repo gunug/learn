@@ -41,3 +41,6 @@ No load(무부하), At Maximum Efficiency(최대효율, 적정부하), Stall(정
 
 ---
 
+* LED 저항계산기: https://whoisit.tistory.com/414
+* 저항 컬러코드 환산기 : http://kor.pe.kr/util/4/r_calc/
+

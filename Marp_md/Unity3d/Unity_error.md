@@ -46,3 +46,13 @@ error_2
 * Package Manager 에서 생긴 오류로 자주 생기는 문제임
  
 * 해결방법 : Unity Hub에서 로그아웃 후 재로그인
+
+---
+
+```An error occurred while resolving packages: Project has invalid dependencies: com.unity.feature.development: Package [com.unity.feature.development@1.0.1] cannot be found```
+
+
+1) Continue를 눌러서 프로젝트를 실행시키세요.
+2) window > Package Manager를 선택하여 Package Manager 창을 여세요.
+3) Package Manager 창에서 Package: In Project를 선택하세요.
+4) Package 중에 Error를 발생시키고 있는 것이 있다면 선택하여 Remove로 제거하면 됩니다.

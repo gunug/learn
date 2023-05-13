@@ -107,5 +107,12 @@ void loop()
 
 ---
 
+# I2C adress 변환
+![](../../Marp_images/Arduino/LCD2.png)
+![bg right w:500](../../Marp_images/Arduino/LCD1.png)
+* IC 칩 모델명 확인 모델에 따라 A0,A1,A2를 납땜해주는것으로 주소가 바뀜
+
+---
+
 - Liquidcrystal 정보출처 : https://webnautes.tistory.com/978
 - Liquidcrystal_i2c 정보 출처: https://juahnpop.tistory.com/97

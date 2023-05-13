@@ -80,6 +80,7 @@ footer: 2023-05-08
 ---
 
 - 프로빌더 참고서: https://docs.unity3d.com/Packages/com.unity.probuilder@4.0/manual/index.html
-- 사용법 참고 유튜브 영상 : https://www.youtube.com/watch?v=HUeQeSB45PI
-- 사용법 참고 유튜브 영상 : https://www.youtube.com/watch?v=CBa_opm3_GM
-- 사용법 참고 유튜브 영상 : https://www.youtube.com/watch?v=YtzIXCKr8Wo
+- https://www.youtube.com/watch?v=HUeQeSB45PI
+- https://www.youtube.com/watch?v=CBa_opm3_GM
+- https://www.youtube.com/watch?v=YtzIXCKr8Wo
+- https://youtu.be/PUSOg5YEflM

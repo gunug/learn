@@ -21,7 +21,36 @@ footer: 2023-04-12
 * 빗물 감지 센서 : https://www.devicemart.co.kr/goods/view?no=1327430﻿
 
 * DC 모터 드라이버 : https://www.devicemart.co.kr/goods/view?no=1278835
+```
+동작전압        DC 5V
+동작전류        0mA ~ 36mA
+모터입력전압  DC 5V ~ 35V
+모터허용전류  2A (MAX)
+최대소비전력  25W
+PCB사이즈      43mm X 43mm X 27mm
+```
 * Mosfet DC 모터 드라이버 : https://www.vctec.co.kr/product/detail.html?product_no=17527&cate_no=204&display_group=1&cafe_mkt=naver_ks&NaPm=ct%3Dlh7c3mwg%7Cci%3D0c6f2250ba54ec2e8e1c0467aaa2a7670fb31624%7Ctr%3Dsls%7Csn%3D246260%7Chk%3D0dc6fc680b00147fb04a4a50b696f377e534b683
+
+* 대용량 모터 드라이버 : https://www.devicemart.co.kr/goods/view?no=1361020
+---
+
+* GP2Y0A02 IR : https://www.devicemart.co.kr/goods/view?no=1280438
+* 리튬폴리머 충전모듈, 배터리 : https://smartstore.naver.com/pthaus/products/4872268523?NaPm=ct%3Dlhhd5ooo%7Cci%3D8f28a5c2287f88a2054f50afc12b1f6182563ba1%7Ctr%3Dsls%7Csn%3D688628%7Chk%3Df0c02a41dbfa12c35f577036b3ae59f84ecd5945
+* 리튬폴리머 충전모듈 : https://smartstore.naver.com/makeitfun/products/5391794392?NaPm=ct%3Dlhhd5pgg%7Cci%3D2aefec7ff9b8e8125af4a2559dcb682fee367c19%7Ctr%3Dsls%7Csn%3D361723%7Chk%3D21c096f7e1882e4ec9203103c5aa455d7a7692cc
+
+---
+
+* RC용 리튬폴리머 배터리 : http://itempage3.auction.co.kr/DetailView.aspx?ItemNo=C728490780&frm3=V2
+* RC용 리튬폴리머 배터리 충전기 : http://itempage3.auction.co.kr/DetailView.aspx?ItemNo=D299009065&frm3=V2
+* 사용법 : https://www.youtube.com/watch?v=7movRriF4x4
+NI-MH
+
+---
+
+* 점퍼용 클림프(수) : https://www.devicemart.co.kr/goods/view?no=1360115
+* 점퍼용 클림프 : https://www.devicemart.co.kr/goods/view?no=5710
+* 점퍼용 소켓 : https://www.devicemart.co.kr/goods/view?no=5488
+
 
 ---
 
@@ -30,6 +59,9 @@ footer: 2023-04-12
 
 ---
 
+* ACS712-30A 전류 센서 모듈
+
+---
 
 * ezHMI Lcd : https://www.devicemart.co.kr/goods/view?no=13023431
 * 사용법 : https://blog.naver.com/PostView.naver?blogId=kondal2000&logNo=221987442993&from=search&redirect=Log&widgetTypeCall=true&directAccess=false
