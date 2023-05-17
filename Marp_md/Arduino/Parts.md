@@ -14,6 +14,7 @@ footer: 2023-04-12
 * 아두이노 레오나르도 : https://www.devicemart.co.kr/goods/view?no=1278923
 * I/O쉴드(아두이노우노, 아두이노레오나르도 호환) : https://www.devicemart.co.kr/goods/view?no=1279498
 * F/F 소켓 점퍼 케이블 : https://www.devicemart.co.kr/goods/view?no=1321192
+* 핀헤더 : https://www.devicemart.co.kr/goods/search?if_count_chk=1&search_text=%ED%95%80%ED%97%A4%EB%8D%94&q=%ED%95%80%ED%97%A4%EB%8D%94&api_no=&stock=&x=0&y=0&popup=&iframe=&old_search_text=&category1=
 
 # 부가구성
 
@@ -91,3 +92,12 @@ NI-MH
 [아재링크](https://ko.aliexpress.com/item/1005002538906794.html?spm=a2g0o.productlist.main.21.444c245bQa0vRW&algo_pvid=eb529c63-f2be-4dfc-8a23-d105716bddd3&algo_exp_id=eb529c63-f2be-4dfc-8a23-d105716bddd3-10&pdp_npi=3%40dis%21USD%219.79%216.85%21%21%21%21%21%402102169316813150802411402d0750%2112000021939370474%21sea%21KR%214463635912&curPageLogUid=baqIlZ2tLxAf&aff_fcid=f3cadee5d9224fbf9720bbd3726e2e3f-1681741280847-07809-_DDqE3Lx&tt=CPS_NORMAL&aff_fsk=_DDqE3Lx&aff_platform=portals-tool&sk=_DDqE3Lx&aff_trace_key=f3cadee5d9224fbf9720bbd3726e2e3f-1681741280847-07809-_DDqE3Lx&terminal_id=2fb4dead8eb04428953672d3dcb8dd7b&afSmartRedirect=y)
 
 * 허스키렌즈 : https://search.shopping.naver.com/search/all?query=%ED%97%88%EC%8A%A4%ED%82%A4%EB%A0%8C%EC%A6%88&bt=1&frm=NVSCPRO
+
+---
+
+# DC motor shield
+* 정보출처 : https://learn.adafruit.com/adafruit-motor-shield-v2-for-arduino/faq
+
+실드는 SDA 및 SCL i2c 핀을 사용하여 DC 및 스테퍼 모터를 제어합니다. Arduino UNO에서는 A4 및 A5라고도 합니다. Mega에서는 디지털 20 및 21이라고도 합니다. Leonardo에서는 디지털 2 및 3이라고도 합니다. i2c 센서/드라이버가 아닌 이 쉴드가 있는 Arduinos의 핀을 사용하지 마십시오. 실드는 I2C를 사용하여 통신하므로 주소 0x60 (실드의 기본 주소) 또는 0x70 ('all call' 주소를
+
+사용하지 않는 한 다른 i2c 센서 또는 드라이버를 SDA/SCL 핀에 연결할 수 있습니다. 이 칩은 그룹 제어에 사용됨) 서보 연결을 사용하려면 핀 #9 및 #10에 있습니다. 커넥터를 사용하지 않으면 해당 핀이 사용되지 않습니다.
