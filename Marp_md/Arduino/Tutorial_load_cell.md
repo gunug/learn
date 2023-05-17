@@ -9,6 +9,11 @@ header: 아두이노
 footer: 2023-04-18 ~2023-04-25
 ---
 
+# 로드셀
+* 정보출처 : https://circuitjournal.com/four-wire-load-cell-with-HX711
+
+---
+
 # HX711
 * 1,700원 : https://www.devicemart.co.kr/goods/view?no=1327440
 * 2,000원 : https://www.devicemart.co.kr/goods/view?no=1327397
@@ -53,6 +58,10 @@ DAT | D4 | 데이터
 CLK | D5 | 클럭
 VCC | 5V | 전원+
 VDD | 5V | 전원+
+
+---
+
+![](../../Marp_images/Arduino/hx711_wire.png)
 
 ---
 
