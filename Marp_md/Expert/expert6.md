@@ -320,3 +320,41 @@ int  MQGetPercentage(float rs_ro_ratio, float *pcurve)
 }
 
 ```
+
+---
+
+```c++
+float MQRead(int mq_pin) //샘플타임 횟수만큼 리드하여 평균내기
+{
+  int i;
+  float rs=0;
+ 
+  for (i=0;i<READ_SAMPLE_TIMES;i++)  {
+    rs += MQResistanceCalculation(analogRead(mq_pin));
+    delay(READ_SAMPLE_INTERVAL);
+  }
+ 
+  rs = rs/READ_SAMPLE_TIMES;
+ 
+  return rs;  
+}
+#define         RL_VALUE                     (5)     //define the load resistance on the board, in kilo ohms
+MQResistanceCalculation(analogRead(mq_pin));
+float MQResistanceCalculation(int raw_adc) //전류값을 역산하고 정규화(0~1) 하고 저항값을 곱함
+{
+  return ( ((float)RL_VALUE*(1023-raw_adc)/raw_adc));
+}
+
+MQGetGasPercentage(MQRead(MQ_PIN)/Ro,GAS_CO);
+MQGetPercentage(rs_ro_ratio,LPGCurve);
+int  MQGetPercentage(float rs_ro_ratio, float *pcurve)
+{
+  return (pow(10,(((log(rs_ro_ratio)-pcurve[1])/pcurve[2]) + pcurve[0])));
+}
+float           LPGCurve[3]  =  {2.3,0.21,-0.47};   //two points are taken from the curve.  
+                                                    //with these two points,  a line is formed which is "approximately equivalent"
+                                                    //to  the original curve. 
+                                                    //data  format:{ x, y, slope}; point1: (lg200, 0.21), point2: (lg10000, -0.59) 
+```
+
+---

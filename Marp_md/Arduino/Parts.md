@@ -16,6 +16,8 @@ footer: 2023-04-12
 * F/F 소켓 점퍼 케이블 : https://www.devicemart.co.kr/goods/view?no=1321192
 * 핀헤더 : https://www.devicemart.co.kr/goods/search?if_count_chk=1&search_text=%ED%95%80%ED%97%A4%EB%8D%94&q=%ED%95%80%ED%97%A4%EB%8D%94&api_no=&stock=&x=0&y=0&popup=&iframe=&old_search_text=&category1=
 
+---
+
 # 부가구성
 
 * PIR Sensor (동작감지센서) : https://www.devicemart.co.kr/goods/view?no=1342156
@@ -30,9 +32,13 @@ footer: 2023-04-12
 최대소비전력  25W
 PCB사이즈      43mm X 43mm X 27mm
 ```
+---
+
+* ESP32-CAM 호환보드 + CH340 micro B : https://www.devicemart.co.kr/goods/view?no=14121233
 * Mosfet DC 모터 드라이버 : https://www.vctec.co.kr/product/detail.html?product_no=17527&cate_no=204&display_group=1&cafe_mkt=naver_ks&NaPm=ct%3Dlh7c3mwg%7Cci%3D0c6f2250ba54ec2e8e1c0467aaa2a7670fb31624%7Ctr%3Dsls%7Csn%3D246260%7Chk%3D0dc6fc680b00147fb04a4a50b696f377e534b683
 
 * 대용량 모터 드라이버 : https://www.devicemart.co.kr/goods/view?no=1361020
+
 ---
 
 * GP2Y0A02 IR : https://www.devicemart.co.kr/goods/view?no=1280438
