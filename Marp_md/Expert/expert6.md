@@ -355,6 +355,13 @@ float           LPGCurve[3]  =  {2.3,0.21,-0.47};   //two points are taken from 
                                                     //with these two points,  a line is formed which is "approximately equivalent"
                                                     //to  the original curve. 
                                                     //data  format:{ x, y, slope}; point1: (lg200, 0.21), point2: (lg10000, -0.59) 
+                                                    //X,Y,기울기
 ```
 
 ---
+* ppm 백만분율 10000ppm == 1%
+* LPGCurve[3]  =  {2.3,0.21,-0.47}; //X,Y,기울기
+* COCurve[3]  =  {2.3,0.72,-0.34};
+* SmokeCurve[3] ={2.3,0.53,-0.44};
+* MQ-2 Datasheet: http://sandboxelectronics.com/files/SEN-000004/MQ-2.pdf
+![](../../Marp_images/Expert/expert6_.png)
