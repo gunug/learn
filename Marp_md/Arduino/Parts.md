@@ -89,6 +89,8 @@ NI-MH
 
 * 진동모터 모듈 : https://smartstore.naver.com/domekit/products/2331737033?
 
+* MP3 모듈 : https://www.devicemart.co.kr/goods/view?no=1360145
+
 ---
 
 * PWM : On/Off 제어 모듈
