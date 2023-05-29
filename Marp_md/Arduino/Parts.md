@@ -109,3 +109,8 @@ NI-MH
 실드는 SDA 및 SCL i2c 핀을 사용하여 DC 및 스테퍼 모터를 제어합니다. Arduino UNO에서는 A4 및 A5라고도 합니다. Mega에서는 디지털 20 및 21이라고도 합니다. Leonardo에서는 디지털 2 및 3이라고도 합니다. i2c 센서/드라이버가 아닌 이 쉴드가 있는 Arduinos의 핀을 사용하지 마십시오. 실드는 I2C를 사용하여 통신하므로 주소 0x60 (실드의 기본 주소) 또는 0x70 ('all call' 주소를
 
 사용하지 않는 한 다른 i2c 센서 또는 드라이버를 SDA/SCL 핀에 연결할 수 있습니다. 이 칩은 그룹 제어에 사용됨) 서보 연결을 사용하려면 핀 #9 및 #10에 있습니다. 커넥터를 사용하지 않으면 해당 핀이 사용되지 않습니다.
+
+---
+
+* MAX6675 온도센서 : https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=mmatelee&logNo=221360755958
+* 납땜용 점퍼 와이어 30AWG : https://www.coupang.com/vp/products/2021186346?itemId=3438221258&vendorItemId=76777302016&q=%EC%A0%84%EC%84%A01m%EB%8B%A8%EC%84%A0%EB%B8%8C%EB%A0%88%EB%93%9C%EB%B3%B4%EB%93%9C%EC%A0%84%EC%84%A0%EC%97%B0%EA%B2%B0%EC%84%A0%EC%A0%90%ED%8D%BC%EC%99%80%EC%9D%B4%EC%96%B4%EC%84%A0&itemsCount=36&searchId=71c928346fcc4d4e9d14944b3723176a&rank=3&isAddedCart=
