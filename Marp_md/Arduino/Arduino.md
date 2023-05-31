@@ -184,3 +184,6 @@ SPI통신으로 제어한다면 Clock와 data는 같이 공용으로 사용해�
 참고하세요.
 
 ---
+
+# 아두이노 와이파이 기지국 (서버역할)
+* https://postpop.tistory.com/23
