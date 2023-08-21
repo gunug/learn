@@ -70,3 +70,8 @@ footer: 2023-04-13
 ---
 
 이미지 저장위치 : F:\obabooga\text-generation-webui\extensions\sd_api_pictures\outputs
+
+---
+
+# 다른걸로 재도전
+* https://huggingface.co/TheBloke/Nous-Hermes-13B-GPTQ
